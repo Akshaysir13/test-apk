@@ -264,33 +264,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return { success: true }; // Allow login even if validation fails
   }
 };
-
-  //const validateDevice = async (userEmail: string): Promise<{ success: boolean; message?: string }> => {
-    //try {
-     // let deviceId = getStoredDeviceId();
-      //if (!deviceId) {
-       // deviceId = generateDeviceId();
-       // setStoredDeviceId(deviceId);
-    //  }
-
-    //  const { data: existingDevice, error } = await supabase
-       // .from('user_devices')
-       // .select('*')
-      //  .eq('user_email', userEmail)
-       // .single();
-
-     // if (error && error.code !== 'PGRST116') throw error;
-
-     // if (!existingDevice) {
-      //  await supabase.from('user_devices').insert({
-        //  user_email: userEmail,
-       //   device_id: deviceId,
-         // device_type: deviceId.startsWith('web_') ? 'web' : 'android',
-        //});
-        //return { success: true };
-     // }
-
-      if (existingDevice.device_id === deviceId) {
+ if (existingDevice.device_id === deviceId) {
         await supabase
           .from('user_devices')
           .update({ last_active: new Date().toISOString() })
@@ -383,3 +357,4 @@ export function useAuth() {
   return context;
 
 }
+
