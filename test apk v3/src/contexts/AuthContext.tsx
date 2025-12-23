@@ -251,31 +251,44 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [accounts, setAccounts] = useState<UserAccount[]>(initialAccounts);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [currentUser, setCurrentUser] = useState<UserAccount | null>(null);
-
+  
   const validateDevice = async (userEmail: string): Promise<{ success: boolean; message?: string }> => {
-    try {
-      let deviceId = getStoredDeviceId();
-      if (!deviceId) {
-        deviceId = generateDeviceId();
-        setStoredDeviceId(deviceId);
-      }
+  try {
+    // For now, temporarily disable device validation
+    // This allows all users to login from any device
+    console.log('⚠️ Device validation temporarily disabled');
+    return { success: true };
+    
+  } catch (error) {
+    console.error('❌ Device validation error:', error);
+    return { success: true }; // Allow login even if validation fails
+  }
+};
 
-      const { data: existingDevice, error } = await supabase
-        .from('user_devices')
-        .select('*')
-        .eq('user_email', userEmail)
-        .single();
+  //const validateDevice = async (userEmail: string): Promise<{ success: boolean; message?: string }> => {
+    //try {
+     // let deviceId = getStoredDeviceId();
+      //if (!deviceId) {
+       // deviceId = generateDeviceId();
+       // setStoredDeviceId(deviceId);
+    //  }
 
-      if (error && error.code !== 'PGRST116') throw error;
+    //  const { data: existingDevice, error } = await supabase
+       // .from('user_devices')
+       // .select('*')
+      //  .eq('user_email', userEmail)
+       // .single();
 
-      if (!existingDevice) {
-        await supabase.from('user_devices').insert({
-          user_email: userEmail,
-          device_id: deviceId,
-          device_type: deviceId.startsWith('web_') ? 'web' : 'android',
-        });
-        return { success: true };
-      }
+     // if (error && error.code !== 'PGRST116') throw error;
+
+     // if (!existingDevice) {
+      //  await supabase.from('user_devices').insert({
+        //  user_email: userEmail,
+       //   device_id: deviceId,
+         // device_type: deviceId.startsWith('web_') ? 'web' : 'android',
+        //});
+        //return { success: true };
+     // }
 
       if (existingDevice.device_id === deviceId) {
         await supabase
@@ -368,4 +381,5 @@ export function useAuth() {
     throw new Error('useAuth must be used within AuthProvider');
   }
   return context;
+
 }
