@@ -62,13 +62,52 @@ export default function Test() {
 
   const studentAttempts = currentUser ? getStudentAttempts(currentUser.email) : [];
 
-  useEffect(() => {
-    if (showResults && !resultSaved && currentUser) {
+ // Add Supabase import at the top of the file (with other imports)
+import { createClient } from '@supabase/supabase-js';
+
+// Add these lines after the imports (before the component)
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
+
+// Then replace the useEffect with this:
+useEffect(() => {
+  const saveResults = async () => {
+    if (showResults && !resultSaved && currentUser && selectedTest) {
+      // Save to local context (existing)
       saveTestAttempt(currentUser.email);
+      
+      // Save to Supabase for leaderboard
+      const { correct, incorrect, unattempted, totalMarks, maxMarks } = calculateScore();
+      const percentage = ((totalMarks / maxMarks) * 100).toFixed(2);
+      
+      try {
+        const { error } = await supabase
+          .from('test_results')
+          .insert({
+            user_email: currentUser.email,
+            test_name: selectedTest.name,
+            score: totalMarks,
+            total_questions: questions.length,
+            percentage: parseFloat(percentage),
+            time_taken: selectedTest.duration - timeLeft, // time in seconds
+          });
+        
+        if (error) {
+          console.error('Error saving to leaderboard:', error);
+        } else {
+          console.log('✅ Result saved to leaderboard');
+        }
+      } catch (error) {
+        console.error('Error saving result:', error);
+      }
+      
       setResultSaved(true);
     }
-  }, [showResults, resultSaved, currentUser, saveTestAttempt]);
-
+  };
+  
+  saveResults();
+}, [showResults, resultSaved, currentUser, saveTestAttempt, selectedTest, calculateScore, questions.length, timeLeft]);
   useEffect(() => {
     if (!showResults) {
       setResultSaved(false);
