@@ -46,12 +46,20 @@ test.course === 'rank_booster'
                 🚀 Rank Booster Course
               </span>
             </div>
-            <button
-              onClick={logout}
-              className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700"
-            >
-              Logout
-            </button>
+           <div className="flex items-center gap-3">
+  <button
+    onClick={() => navigate('/leaderboard')}
+    className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 flex items-center gap-2"
+  >
+    🏆 Leaderboard
+  </button>
+  <button
+    onClick={logout}
+    className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700"
+  >
+    Logout
+  </button>
+</div>
           </div>
         </div>
       </div>
@@ -209,4 +217,5 @@ test.course === 'rank_booster'
       </div>
     </div>
   );
+
 }
