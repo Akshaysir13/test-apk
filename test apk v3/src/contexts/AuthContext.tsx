@@ -1,4 +1,4 @@
-/ src/contexts/AuthContext.tsx - UPDATED VERSION
+// src/contexts/AuthContext.tsx - UPDATED VERSION
 // ONLY the initialAccounts section changed - rest stays the same
 
 import { createContext, useContext, useState, ReactNode } from 'react';
@@ -355,4 +355,3 @@ export function useAuth() {
   }
   return context;
 }
-
