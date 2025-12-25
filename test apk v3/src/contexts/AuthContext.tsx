@@ -245,30 +245,46 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [currentUser, setCurrentUser] = useState<UserAccount | null>(null);
 
-  // ✅ AUTO-LOGIN: Check localStorage on page load
+  // ✅ AUTO-LOGIN: Listen to Supabase Auth State
   useEffect(() => {
-    const savedAuth = localStorage.getItem('isAuthenticated');
-    const savedUser = localStorage.getItem('currentUser');
-    
-    if (savedAuth === 'true' && savedUser) {
-      try {
-        const user = JSON.parse(savedUser);
-        // Find the user in the latest accounts list to ensure the object is fresh
-        const freshUser = initialAccounts.find(acc => acc.email.toLowerCase() === user.email.toLowerCase());
-        
-        if (freshUser) {
+    // 1. Check current session immediately
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session?.user) {
+        const user = initialAccounts.find(acc => acc.email.toLowerCase() === session.user.email?.toLowerCase());
+        if (user) {
           setIsAuthenticated(true);
-          setCurrentUser(freshUser);
-        } else {
-          // If user not found in hardcoded list, clear storage
-          localStorage.removeItem('isAuthenticated');
-          localStorage.removeItem('currentUser');
+          setCurrentUser(user);
         }
-      } catch (error) {
-        console.error('Error restoring session:', error);
-        localStorage.clear();
       }
-    }
+    });
+
+    // 2. Listen for auth changes (login/logout/refresh)
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
+      if (session?.user) {
+        const user = initialAccounts.find(acc => acc.email.toLowerCase() === session.user.email?.toLowerCase());
+        if (user) {
+          // Verify device lock still holds
+          const deviceCheck = await validateDevice(user.email);
+          if (deviceCheck.success) {
+            setIsAuthenticated(true);
+            setCurrentUser(user);
+          } else {
+            // Device changed! Force logout
+            await supabase.auth.signOut();
+            setIsAuthenticated(false);
+            setCurrentUser(null);
+            navigate('/login', { replace: true });
+          }
+        }
+      } else if (event === 'SIGNED_OUT') {
+        setIsAuthenticated(false);
+        setCurrentUser(null);
+      }
+    });
+
+    return () => {
+      subscription.unsubscribe();
+    };
   }, []);
 
   const validateDevice = async (userEmail: string): Promise<{ success: boolean; message?: string }> => {
@@ -329,12 +345,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       }
     }
 
+    // ✅ Supabase Login
+    const { error: authError } = await supabase.auth.signInWithPassword({
+      email: normalizedEmail,
+      password: password,
+    });
+
+    if (authError) {
+      return { success: false, message: authError.message };
+    }
+
     setIsAuthenticated(true);
     setCurrentUser(user);
-
-    // ✅ SAVE TO LOCALSTORAGE: Remember login
-    localStorage.setItem('isAuthenticated', 'true');
-    localStorage.setItem('currentUser', JSON.stringify(user));
 
     if (user.role === 'admin') {
       navigate('/admin', { replace: true });
@@ -353,14 +375,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return { success: true, message: 'Login successful', isAdmin: user.role === 'admin' };
   };
 
-  const logout = () => {
+  const logout = async () => {
+    await supabase.auth.signOut();
     setIsAuthenticated(false);
     setCurrentUser(null);
-    
-    // ✅ CLEAR LOCALSTORAGE: Logout completely
-    localStorage.removeItem('isAuthenticated');
-    localStorage.removeItem('currentUser');
-    
     navigate('/login', { replace: true });
   };
 
