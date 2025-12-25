@@ -1,7 +1,7 @@
-// src/contexts/AuthContext.tsx - UPDATED VERSION
+/ src/contexts/AuthContext.tsx - UPDATED VERSION
 // ONLY the initialAccounts section changed - rest stays the same
 
-import { createContext, useContext, useState, ReactNode, useEffect } from 'react';
+import { createContext, useContext, useState, ReactNode } from 'react';
 import { createClient } from '@supabase/supabase-js';
 import { useNavigate } from 'react-router-dom';
 import { UserAccount } from '../types';
@@ -73,7 +73,7 @@ const ADMIN_EMAIL = 'admin@jee.com';
 const ADMIN_PASSWORD = 'admin123';
 
 // ==========================================
-// 👥 STUDENT ACCOUNTS - ADD YOUR STUDENTS HERE
+// ðŸ‘¥ STUDENT ACCOUNTS - ADD YOUR STUDENTS HERE
 // ==========================================
 const initialAccounts: UserAccount[] = [
   // ========================================
@@ -88,12 +88,10 @@ const initialAccounts: UserAccount[] = [
   },
   
   // ========================================
-  // 💎 FOUNDATION COURSE STUDENTS (₹6,000)
+  // ðŸ’Ž FOUNDATION COURSE STUDENTS (â‚¹6,000)
   // ADD YOUR FOUNDATION STUDENTS BELOW THIS LINE
   // ========================================
   { email: 'test@gmail.com', password: 'test123', role: 'student', approved: true, courses: ['foundation'] },
-  { email: 'test1@gmail.com', password: 'test123', role: 'student', approved: true , courses: ['foundation'] },
-   { email: 'test@gmail.com', password: 'test123', role: 'student', approved: true, courses: ['foundation'] },
   { email: 'test1@gmail.com', password: 'test123', role: 'student', approved: true , courses: ['foundation'] },
 { email: 'akshaymoghe5@gmail.com', password: 'Sweetakshay', role: 'student', approved: true , courses: ['foundation'] },
 { email: 'akshaymoghe8@gmail.com', password: 'Sweetavinash', role: 'student', approved: true , courses: ['foundation'] },
@@ -165,7 +163,7 @@ const initialAccounts: UserAccount[] = [
 { email: 'student3@gmail.com', password: 'pass123', role: 'student', approved: true , courses: ['foundation'] },
 { email: 'student4@gmail.com', password: 'pass123', role: 'student', approved: true , courses: ['foundation'] },
 { email: 'student5@gmail.com', password: 'pass123', role: 'student', approved: true , courses: ['foundation'] },
-{ email: 'aadityak.8109@gmail.com', password: 'Aaditya#₹08', role: 'student', approved: true , courses: ['foundation'] },
+{ email: 'aadityak.8109@gmail.com', password: 'Aaditya#â‚¹08', role: 'student', approved: true , courses: ['foundation'] },
 { email: 'maghnennana@gmail.com', password: '1234567890', role: 'student', approved: true , courses: ['foundation'] },
 { email: 'student6@gmail.com', password: 'pass123', role: 'student', approved: true , courses: ['foundation'] },
 { email: 'fatimanuzhat2007@gmail.com', password: 'khan@123', role: 'student', approved: true , courses: ['foundation'] },
@@ -173,7 +171,7 @@ const initialAccounts: UserAccount[] = [
 { email: 'navnathsarode28@gmail.com', password: 'navnath@28', role: 'student', approved: true , courses: ['foundation'] },
 { email: 'student14@gmail.com', password: 'pass123', role: 'student', approved: true , courses: ['foundation'] },
   // ========================================
-  // 🚀 RANK BOOSTER COURSE STUDENTS (₹99)
+  // ðŸš€ RANK BOOSTER COURSE STUDENTS (â‚¹99)
   // Copy this format to add Rank Booster students
   // ========================================
 { email: 'akshaymoghe5@gmail.com', password: 'sweetakshay@13', role: 'student', approved: true , courses: ['rank_booster'] },
@@ -245,65 +243,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [currentUser, setCurrentUser] = useState<UserAccount | null>(null);
 
-  // ✅ AUTO-LOGIN: Listen to Supabase Auth State + LocalStorage Backup
-  useEffect(() => {
-    // 1. Check current Supabase session
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      if (session?.user) {
-        const user = initialAccounts.find(acc => acc.email.toLowerCase() === session.user.email?.toLowerCase());
-        if (user) {
-          setIsAuthenticated(true);
-          setCurrentUser(user);
-          return;
-        }
-      }
-
-      // 2. Fallback to LocalStorage for hardcoded users not yet in Supabase
-      const savedAuth = localStorage.getItem('isAuthenticated');
-      const savedUser = localStorage.getItem('currentUser');
-      if (savedAuth === 'true' && savedUser) {
-        try {
-          const user = JSON.parse(savedUser);
-          const freshUser = initialAccounts.find(acc => acc.email.toLowerCase() === user.email.toLowerCase());
-          if (freshUser) {
-            setIsAuthenticated(true);
-            setCurrentUser(freshUser);
-          }
-        } catch (e) {
-          console.error('Error restoring legacy session:', e);
-        }
-      }
-    });
-
-    // 3. Listen for auth changes
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
-      if (session?.user) {
-        const user = initialAccounts.find(acc => acc.email.toLowerCase() === session.user.email?.toLowerCase());
-        if (user) {
-          // Verify device lock still holds
-          const deviceCheck = await validateDevice(user.email);
-          if (deviceCheck.success) {
-            setIsAuthenticated(true);
-            setCurrentUser(user);
-          } else {
-            // Device changed! Force logout
-            await supabase.auth.signOut();
-            setIsAuthenticated(false);
-            setCurrentUser(null);
-            navigate('/login', { replace: true });
-          }
-        }
-      } else if (event === 'SIGNED_OUT') {
-        setIsAuthenticated(false);
-        setCurrentUser(null);
-      }
-    });
-
-    return () => {
-      subscription.unsubscribe();
-    };
-  }, []);
-
   const validateDevice = async (userEmail: string): Promise<{ success: boolean; message?: string }> => {
     try {
       let deviceId = getStoredDeviceId();
@@ -345,7 +284,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const login = async (email: string, password: string): Promise<LoginResult> => {
     const normalizedEmail = email.trim().toLowerCase();
-    const user = initialAccounts.find(
+    const user = accounts.find(
       acc => acc.email.toLowerCase() === normalizedEmail && acc.password === password
     );
 
@@ -362,28 +301,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       }
     }
 
-    // ✅ Supabase Login
-    try {
-      const { error: authError } = await supabase.auth.signInWithPassword({
-        email: normalizedEmail,
-        password: password,
-      });
-
-      if (authError) {
-        // If Supabase fails (e.g. user not in Supabase yet), still allow hardcoded login
-        console.warn('Supabase login failed, falling back to hardcoded check:', authError.message);
-      }
-    } catch (err) {
-      console.error('Supabase connection error:', err);
-    }
-
-    // Always restore the session manually for hardcoded users to ensure local state is correct
     setIsAuthenticated(true);
     setCurrentUser(user);
-
-    // Save to localStorage as a backup for hardcoded users who might not have Supabase accounts yet
-    localStorage.setItem('isAuthenticated', 'true');
-    localStorage.setItem('currentUser', JSON.stringify(user));
 
     if (user.role === 'admin') {
       navigate('/admin', { replace: true });
@@ -402,12 +321,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return { success: true, message: 'Login successful', isAdmin: user.role === 'admin' };
   };
 
-  const logout = async () => {
-    await supabase.auth.signOut();
+  const logout = () => {
     setIsAuthenticated(false);
     setCurrentUser(null);
-    localStorage.removeItem('isAuthenticated');
-    localStorage.removeItem('currentUser');
     navigate('/login', { replace: true });
   };
 
@@ -439,3 +355,4 @@ export function useAuth() {
   }
   return context;
 }
+
