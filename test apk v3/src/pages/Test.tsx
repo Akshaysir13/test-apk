@@ -69,6 +69,9 @@ export default function Test() {
 useEffect(() => {
   const saveResults = async () => {
     if (showResults && !resultSaved && currentUser && selectedTest) {
+      // Set this FIRST to prevent multiple saves
+      setResultSaved(true);
+      
       saveTestAttempt(currentUser.email);
       
       const { correct, incorrect, unattempted, totalMarks, maxMarks } = calculateScore();
@@ -88,13 +91,11 @@ useEffect(() => {
       } catch (error) {
         console.error('Error saving result:', error);
       }
-      
-      setResultSaved(true);
     }
   };
   
   saveResults();
-}, [showResults, resultSaved, currentUser, saveTestAttempt, selectedTest, calculateScore, questions.length, timeLeft]);
+}, [showResults, currentUser, selectedTest]); // ← REMOVED the problematic dependencies
   useEffect(() => {
     if (!showResults) {
       setResultSaved(false);
