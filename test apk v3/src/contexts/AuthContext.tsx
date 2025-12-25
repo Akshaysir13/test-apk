@@ -1,7 +1,7 @@
 // src/contexts/AuthContext.tsx - UPDATED VERSION
 // ONLY the initialAccounts section changed - rest stays the same
 
-import { createContext, useContext, useState, ReactNode, useEffect } from 'react';
+import { createContext, useContext, useState, ReactNode } from 'react';
 import { createClient } from '@supabase/supabase-js';
 import { useNavigate } from 'react-router-dom';
 import { UserAccount } from '../types';
@@ -92,8 +92,6 @@ const initialAccounts: UserAccount[] = [
   // ADD YOUR FOUNDATION STUDENTS BELOW THIS LINE
   // ========================================
   { email: 'test@gmail.com', password: 'test123', role: 'student', approved: true, courses: ['foundation'] },
-  { email: 'test1@gmail.com', password: 'test123', role: 'student', approved: true , courses: ['foundation'] },
-   { email: 'test@gmail.com', password: 'test123', role: 'student', approved: true, courses: ['foundation'] },
   { email: 'test1@gmail.com', password: 'test123', role: 'student', approved: true , courses: ['foundation'] },
 { email: 'akshaymoghe5@gmail.com', password: 'Sweetakshay', role: 'student', approved: true , courses: ['foundation'] },
 { email: 'akshaymoghe8@gmail.com', password: 'Sweetavinash', role: 'student', approved: true , courses: ['foundation'] },
@@ -245,11 +243,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [currentUser, setCurrentUser] = useState<UserAccount | null>(null);
 
-  // ✅ AUTO-LOGIN: Disabled for security
-  useEffect(() => {
-    // Session persistence removed as requested
-  }, []);
-
   const validateDevice = async (userEmail: string): Promise<{ success: boolean; message?: string }> => {
     try {
       let deviceId = getStoredDeviceId();
@@ -291,7 +284,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const login = async (email: string, password: string): Promise<LoginResult> => {
     const normalizedEmail = email.trim().toLowerCase();
-    const user = initialAccounts.find(
+    const user = accounts.find(
       acc => acc.email.toLowerCase() === normalizedEmail && acc.password === password
     );
 
@@ -308,7 +301,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       }
     }
 
-    // ✅ Manual Login with Device Check
     setIsAuthenticated(true);
     setCurrentUser(user);
 
@@ -332,8 +324,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const logout = () => {
     setIsAuthenticated(false);
     setCurrentUser(null);
-    localStorage.removeItem('isAuthenticated');
-    localStorage.removeItem('currentUser');
     navigate('/login', { replace: true });
   };
 
