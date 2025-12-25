@@ -245,20 +245,37 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [currentUser, setCurrentUser] = useState<UserAccount | null>(null);
 
-  // ✅ AUTO-LOGIN: Listen to Supabase Auth State
+  // ✅ AUTO-LOGIN: Listen to Supabase Auth State + LocalStorage Backup
   useEffect(() => {
-    // 1. Check current session immediately
+    // 1. Check current Supabase session
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (session?.user) {
         const user = initialAccounts.find(acc => acc.email.toLowerCase() === session.user.email?.toLowerCase());
         if (user) {
           setIsAuthenticated(true);
           setCurrentUser(user);
+          return;
+        }
+      }
+
+      // 2. Fallback to LocalStorage for hardcoded users not yet in Supabase
+      const savedAuth = localStorage.getItem('isAuthenticated');
+      const savedUser = localStorage.getItem('currentUser');
+      if (savedAuth === 'true' && savedUser) {
+        try {
+          const user = JSON.parse(savedUser);
+          const freshUser = initialAccounts.find(acc => acc.email.toLowerCase() === user.email.toLowerCase());
+          if (freshUser) {
+            setIsAuthenticated(true);
+            setCurrentUser(freshUser);
+          }
+        } catch (e) {
+          console.error('Error restoring legacy session:', e);
         }
       }
     });
 
-    // 2. Listen for auth changes (login/logout/refresh)
+    // 3. Listen for auth changes
     const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
       if (session?.user) {
         const user = initialAccounts.find(acc => acc.email.toLowerCase() === session.user.email?.toLowerCase());
@@ -328,7 +345,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const login = async (email: string, password: string): Promise<LoginResult> => {
     const normalizedEmail = email.trim().toLowerCase();
-    const user = accounts.find(
+    const user = initialAccounts.find(
       acc => acc.email.toLowerCase() === normalizedEmail && acc.password === password
     );
 
@@ -346,17 +363,27 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
 
     // ✅ Supabase Login
-    const { error: authError } = await supabase.auth.signInWithPassword({
-      email: normalizedEmail,
-      password: password,
-    });
+    try {
+      const { error: authError } = await supabase.auth.signInWithPassword({
+        email: normalizedEmail,
+        password: password,
+      });
 
-    if (authError) {
-      return { success: false, message: authError.message };
+      if (authError) {
+        // If Supabase fails (e.g. user not in Supabase yet), still allow hardcoded login
+        console.warn('Supabase login failed, falling back to hardcoded check:', authError.message);
+      }
+    } catch (err) {
+      console.error('Supabase connection error:', err);
     }
 
+    // Always restore the session manually for hardcoded users to ensure local state is correct
     setIsAuthenticated(true);
     setCurrentUser(user);
+
+    // Save to localStorage as a backup for hardcoded users who might not have Supabase accounts yet
+    localStorage.setItem('isAuthenticated', 'true');
+    localStorage.setItem('currentUser', JSON.stringify(user));
 
     if (user.role === 'admin') {
       navigate('/admin', { replace: true });
@@ -379,6 +406,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     await supabase.auth.signOut();
     setIsAuthenticated(false);
     setCurrentUser(null);
+    localStorage.removeItem('isAuthenticated');
+    localStorage.removeItem('currentUser');
     navigate('/login', { replace: true });
   };
 
