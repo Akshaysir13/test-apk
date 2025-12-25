@@ -1,7 +1,7 @@
 // src/contexts/AuthContext.tsx - UPDATED VERSION
 // ONLY the initialAccounts section changed - rest stays the same
 
-import { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 import { createClient } from '@supabase/supabase-js';
 import { useNavigate } from 'react-router-dom';
 import { UserAccount } from '../types';
@@ -73,7 +73,7 @@ const ADMIN_EMAIL = 'admin@jee.com';
 const ADMIN_PASSWORD = 'admin123';
 
 // ==========================================
-// ðŸ‘¥ STUDENT ACCOUNTS - ADD YOUR STUDENTS HERE
+// 👥 STUDENT ACCOUNTS - ADD YOUR STUDENTS HERE
 // ==========================================
 const initialAccounts: UserAccount[] = [
   // ========================================
@@ -88,10 +88,12 @@ const initialAccounts: UserAccount[] = [
   },
   
   // ========================================
-  // ðŸ’Ž FOUNDATION COURSE STUDENTS (â‚¹6,000)
+  // 💎 FOUNDATION COURSE STUDENTS (₹6,000)
   // ADD YOUR FOUNDATION STUDENTS BELOW THIS LINE
   // ========================================
   { email: 'test@gmail.com', password: 'test123', role: 'student', approved: true, courses: ['foundation'] },
+  { email: 'test1@gmail.com', password: 'test123', role: 'student', approved: true , courses: ['foundation'] },
+   { email: 'test@gmail.com', password: 'test123', role: 'student', approved: true, courses: ['foundation'] },
   { email: 'test1@gmail.com', password: 'test123', role: 'student', approved: true , courses: ['foundation'] },
 { email: 'akshaymoghe5@gmail.com', password: 'Sweetakshay', role: 'student', approved: true , courses: ['foundation'] },
 { email: 'akshaymoghe8@gmail.com', password: 'Sweetavinash', role: 'student', approved: true , courses: ['foundation'] },
@@ -163,7 +165,7 @@ const initialAccounts: UserAccount[] = [
 { email: 'student3@gmail.com', password: 'pass123', role: 'student', approved: true , courses: ['foundation'] },
 { email: 'student4@gmail.com', password: 'pass123', role: 'student', approved: true , courses: ['foundation'] },
 { email: 'student5@gmail.com', password: 'pass123', role: 'student', approved: true , courses: ['foundation'] },
-{ email: 'aadityak.8109@gmail.com', password: 'Aaditya#â‚¹08', role: 'student', approved: true , courses: ['foundation'] },
+{ email: 'aadityak.8109@gmail.com', password: 'Aaditya#₹08', role: 'student', approved: true , courses: ['foundation'] },
 { email: 'maghnennana@gmail.com', password: '1234567890', role: 'student', approved: true , courses: ['foundation'] },
 { email: 'student6@gmail.com', password: 'pass123', role: 'student', approved: true , courses: ['foundation'] },
 { email: 'fatimanuzhat2007@gmail.com', password: 'khan@123', role: 'student', approved: true , courses: ['foundation'] },
@@ -171,7 +173,7 @@ const initialAccounts: UserAccount[] = [
 { email: 'navnathsarode28@gmail.com', password: 'navnath@28', role: 'student', approved: true , courses: ['foundation'] },
 { email: 'student14@gmail.com', password: 'pass123', role: 'student', approved: true , courses: ['foundation'] },
   // ========================================
-  // ðŸš€ RANK BOOSTER COURSE STUDENTS (â‚¹99)
+  // 🚀 RANK BOOSTER COURSE STUDENTS (₹99)
   // Copy this format to add Rank Booster students
   // ========================================
 { email: 'akshaymoghe5@gmail.com', password: 'sweetakshay@13', role: 'student', approved: true , courses: ['rank_booster'] },
@@ -243,6 +245,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [currentUser, setCurrentUser] = useState<UserAccount | null>(null);
 
+  // ✅ AUTO-LOGIN: Disabled for security
+  useEffect(() => {
+    // Session persistence removed as requested
+  }, []);
+
   const validateDevice = async (userEmail: string): Promise<{ success: boolean; message?: string }> => {
     try {
       let deviceId = getStoredDeviceId();
@@ -284,7 +291,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const login = async (email: string, password: string): Promise<LoginResult> => {
     const normalizedEmail = email.trim().toLowerCase();
-    const user = accounts.find(
+    const user = initialAccounts.find(
       acc => acc.email.toLowerCase() === normalizedEmail && acc.password === password
     );
 
@@ -301,6 +308,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       }
     }
 
+    // ✅ Manual Login with Device Check
     setIsAuthenticated(true);
     setCurrentUser(user);
 
@@ -324,6 +332,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const logout = () => {
     setIsAuthenticated(false);
     setCurrentUser(null);
+    localStorage.removeItem('isAuthenticated');
+    localStorage.removeItem('currentUser');
     navigate('/login', { replace: true });
   };
 
