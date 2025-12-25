@@ -91,10 +91,10 @@ const initialAccounts: UserAccount[] = [
   // 💎 FOUNDATION COURSE STUDENTS (₹6,000)
   // ADD YOUR FOUNDATION STUDENTS BELOW THIS LINE
   // ========================================
-{ email: 'test@gmail.com', password: 'test123', role: 'student', approved: true, courses: ['foundation'] },
-{ email: 'test1@gmail.com', password: 'test123', role: 'student', approved: true , courses: ['foundation'] },
-{ email: 'test@gmail.com', password: 'test123', role: 'student', approved: true, courses: ['foundation'] },
-{ email: 'test1@gmail.com', password: 'test123', role: 'student', approved: true , courses: ['foundation'] },
+  { email: 'test@gmail.com', password: 'test123', role: 'student', approved: true, courses: ['foundation'] },
+  { email: 'test1@gmail.com', password: 'test123', role: 'student', approved: true , courses: ['foundation'] },
+   { email: 'test@gmail.com', password: 'test123', role: 'student', approved: true, courses: ['foundation'] },
+  { email: 'test1@gmail.com', password: 'test123', role: 'student', approved: true , courses: ['foundation'] },
 { email: 'akshaymoghe5@gmail.com', password: 'Sweetakshay', role: 'student', approved: true , courses: ['foundation'] },
 { email: 'akshaymoghe8@gmail.com', password: 'Sweetavinash', role: 'student', approved: true , courses: ['foundation'] },
 { email: 'archinuzhatkhan@gmail.com', password: 'archi@123', role: 'student', approved: true , courses: ['foundation'] },
@@ -211,6 +211,7 @@ const initialAccounts: UserAccount[] = [
 { email: 'kulkarniavdhoot16@gmail.com', password: 'AVDH001', role: 'student', approved: true , courses: ['rank_booster'] },
 { email: 'student13@gmail.com', password: 'pass123', role: 'student', approved: true , courses: ['rank_booster'] },
 
+  
 ];
 
 // REST OF THE FILE STAYS EXACTLY THE SAME - NO CHANGES BELOW THIS LINE
@@ -252,8 +253,17 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     if (savedAuth === 'true' && savedUser) {
       try {
         const user = JSON.parse(savedUser);
-        setIsAuthenticated(true);
-        setCurrentUser(user);
+        // Find the user in the latest accounts list to ensure the object is fresh
+        const freshUser = initialAccounts.find(acc => acc.email.toLowerCase() === user.email.toLowerCase());
+        
+        if (freshUser) {
+          setIsAuthenticated(true);
+          setCurrentUser(freshUser);
+        } else {
+          // If user not found in hardcoded list, clear storage
+          localStorage.removeItem('isAuthenticated');
+          localStorage.removeItem('currentUser');
+        }
       } catch (error) {
         console.error('Error restoring session:', error);
         localStorage.clear();
