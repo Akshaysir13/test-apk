@@ -1,7 +1,7 @@
 // src/contexts/AuthContext.tsx - UPDATED VERSION
 // ONLY the initialAccounts section changed - rest stays the same
 
-import { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 import { createClient } from '@supabase/supabase-js';
 import { useNavigate } from 'react-router-dom';
 import { UserAccount } from '../types';
@@ -91,8 +91,10 @@ const initialAccounts: UserAccount[] = [
   // 💎 FOUNDATION COURSE STUDENTS (₹6,000)
   // ADD YOUR FOUNDATION STUDENTS BELOW THIS LINE
   // ========================================
-  { email: 'test@gmail.com', password: 'test123', role: 'student', approved: true, courses: ['foundation'] },
-  { email: 'test1@gmail.com', password: 'test123', role: 'student', approved: true , courses: ['foundation'] },
+{ email: 'test@gmail.com', password: 'test123', role: 'student', approved: true, courses: ['foundation'] },
+{ email: 'test1@gmail.com', password: 'test123', role: 'student', approved: true , courses: ['foundation'] },
+{ email: 'test@gmail.com', password: 'test123', role: 'student', approved: true, courses: ['foundation'] },
+{ email: 'test1@gmail.com', password: 'test123', role: 'student', approved: true , courses: ['foundation'] },
 { email: 'akshaymoghe5@gmail.com', password: 'Sweetakshay', role: 'student', approved: true , courses: ['foundation'] },
 { email: 'akshaymoghe8@gmail.com', password: 'Sweetavinash', role: 'student', approved: true , courses: ['foundation'] },
 { email: 'archinuzhatkhan@gmail.com', password: 'archi@123', role: 'student', approved: true , courses: ['foundation'] },
@@ -209,7 +211,6 @@ const initialAccounts: UserAccount[] = [
 { email: 'kulkarniavdhoot16@gmail.com', password: 'AVDH001', role: 'student', approved: true , courses: ['rank_booster'] },
 { email: 'student13@gmail.com', password: 'pass123', role: 'student', approved: true , courses: ['rank_booster'] },
 
-  
 ];
 
 // REST OF THE FILE STAYS EXACTLY THE SAME - NO CHANGES BELOW THIS LINE
@@ -242,6 +243,23 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [accounts, setAccounts] = useState<UserAccount[]>(initialAccounts);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [currentUser, setCurrentUser] = useState<UserAccount | null>(null);
+
+  // ✅ AUTO-LOGIN: Check localStorage on page load
+  useEffect(() => {
+    const savedAuth = localStorage.getItem('isAuthenticated');
+    const savedUser = localStorage.getItem('currentUser');
+    
+    if (savedAuth === 'true' && savedUser) {
+      try {
+        const user = JSON.parse(savedUser);
+        setIsAuthenticated(true);
+        setCurrentUser(user);
+      } catch (error) {
+        console.error('Error restoring session:', error);
+        localStorage.clear();
+      }
+    }
+  }, []);
 
   const validateDevice = async (userEmail: string): Promise<{ success: boolean; message?: string }> => {
     try {
@@ -304,6 +322,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setIsAuthenticated(true);
     setCurrentUser(user);
 
+    // ✅ SAVE TO LOCALSTORAGE: Remember login
+    localStorage.setItem('isAuthenticated', 'true');
+    localStorage.setItem('currentUser', JSON.stringify(user));
+
     if (user.role === 'admin') {
       navigate('/admin', { replace: true });
     } else {
@@ -324,6 +346,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const logout = () => {
     setIsAuthenticated(false);
     setCurrentUser(null);
+    
+    // ✅ CLEAR LOCALSTORAGE: Logout completely
+    localStorage.removeItem('isAuthenticated');
+    localStorage.removeItem('currentUser');
+    
     navigate('/login', { replace: true });
   };
 
@@ -355,4 +382,3 @@ export function useAuth() {
   }
   return context;
 }
-
