@@ -208,7 +208,6 @@ const initialAccounts: UserAccount[] = [
 { email: 'arbazalam8854@gmail.com', password: 'arbaz82', role: 'student', approved: true , courses: ['rank_booster'] },
 { email: 'kulkarniavdhoot16@gmail.com', password: 'AVDH001', role: 'student', approved: true , courses: ['rank_booster'] },
 { email: 'student13@gmail.com', password: 'pass123', role: 'student', approved: true , courses: ['rank_booster'] },
-
   
 ];
 
@@ -239,7 +238,7 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 export function AuthProvider({ children }: { children: ReactNode }) {
   const navigate = useNavigate();
 
-  const [accounts, setAccounts] = useState<UserAccount[]>(initialAccounts);
+  const [accounts] = useState<UserAccount[]>(initialAccounts);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [currentUser, setCurrentUser] = useState<UserAccount | null>(null);
 
