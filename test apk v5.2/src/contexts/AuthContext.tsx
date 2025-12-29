@@ -101,6 +101,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [accounts] = useState<UserAccount[]>(initialAccounts);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [currentUser, setCurrentUser] = useState<UserAccount | null>(null);
+  const [isCheckingSession, setIsCheckingSession] = useState(true);
 
   // ==========================================
   // 🔄 RESTORE SESSION ON MOUNT
@@ -109,25 +110,46 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     async function restoreSession() {
       try {
         const deviceId = getStoredDeviceId();
-        if (!deviceId) return; // No device ID = fresh browser
+        
+        if (!deviceId) {
+          console.log('No device ID found');
+          setIsCheckingSession(false);
+          return;
+        }
+
+        console.log('Checking for session with device:', deviceId);
 
         // Check if this device has a valid session
         const { data, error } = await supabase
           .from('user_sessions')
           .select('*')
           .eq('device_id', deviceId)
-          .single();
+          .maybeSingle();
 
-        if (error || !data) return;
+        if (error) {
+          console.error('Session check error:', error);
+          setIsCheckingSession(false);
+          return;
+        }
+
+        if (!data) {
+          console.log('No session found');
+          setIsCheckingSession(false);
+          return;
+        }
+
+        console.log('Session found:', data);
 
         // Check if session expired
         const expiresAt = new Date(data.expires_at);
         if (expiresAt < new Date()) {
+          console.log('Session expired');
           // Expired - clean it up
           await supabase
             .from('user_sessions')
             .delete()
             .eq('device_id', deviceId);
+          setIsCheckingSession(false);
           return;
         }
 
@@ -141,16 +163,36 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           approved: sessionData.approved
         };
 
+        console.log('Restoring user:', user.email);
+
         setIsAuthenticated(true);
         setCurrentUser(user);
 
+        // Navigate to appropriate dashboard
+        const currentPath = window.location.pathname;
+        if (currentPath === '/login' || currentPath === '/') {
+          if (user.role === 'admin') {
+            navigate('/admin', { replace: true });
+          } else if (user.courses?.includes('advance_2026')) {
+            navigate('/dashboard/advance-2026', { replace: true });
+          } else if (user.courses?.includes('foundation')) {
+            navigate('/dashboard/foundation', { replace: true });
+          } else if (user.courses?.includes('rank_booster')) {
+            navigate('/dashboard/rank-booster', { replace: true });
+          } else {
+            navigate('/dashboard/dheya', { replace: true });
+          }
+        }
+
       } catch (err) {
         console.error('Failed to restore session:', err);
+      } finally {
+        setIsCheckingSession(false);
       }
     }
 
     restoreSession();
-  }, []);
+  }, [navigate]);
 
   // ==========================================
   // 🔐 DEVICE VALIDATION
@@ -224,8 +266,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
     // 💾 SAVE SESSION TO SUPABASE
     try {
-      const deviceId = getStoredDeviceId() || generateDeviceId();
-      await supabase.from('user_sessions').upsert({
+      let deviceId = getStoredDeviceId();
+      if (!deviceId) {
+        deviceId = generateDeviceId();
+        setStoredDeviceId(deviceId);
+      }
+
+      console.log('Saving session for:', user.email, 'device:', deviceId);
+
+      const { error } = await supabase.from('user_sessions').upsert({
         user_email: user.email,
         device_id: deviceId,
         session_data: JSON.stringify({
@@ -235,7 +284,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           approved: user.approved
         }),
         expires_at: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString() // 7 days
+      }, {
+        onConflict: 'user_email,device_id'
       });
+
+      if (error) {
+        console.error('Failed to save session:', error);
+      } else {
+        console.log('Session saved successfully');
+      }
     } catch (err) {
       console.error('Failed to save session:', err);
       // Continue anyway - user can still use the app
@@ -277,6 +334,21 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setCurrentUser(null);
     navigate('/login', { replace: true });
   };
+
+  // Show loading while checking session
+  if (isCheckingSession) {
+    return (
+      <div style={{ 
+        display: 'flex', 
+        justifyContent: 'center', 
+        alignItems: 'center', 
+        height: '100vh',
+        fontSize: '18px'
+      }}>
+        Loading...
+      </div>
+    );
+  }
 
   return (
     <AuthContext.Provider
