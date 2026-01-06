@@ -370,6 +370,35 @@ export function TestProvider({ children }: { children: ReactNode }) {
   }, [testStarted, testCompleted, saveTestState]);
 
 
+  const selectTest = (test: Test) => {
+    setSelectedTest(test);
+    setTestCompleted(false);
+    setShowResults(false);
+    setViolations([]);
+    setTabSwitchCount(0);
+    setFullscreenExitCount(0);
+    setScreenshotBlocked(false);
+  };
+
+  const startTest = (): boolean => {
+    if (!selectedTest) return false;
+    const shuffled = selectedTest.questions.map(shuffleOptions);
+    setQuestions(shuffled);
+    setTestStarted(true);
+    setTestCompleted(false);
+    setShowResults(false);
+    setTimeLeft(selectedTest.duration);
+    setCurrentQuestion(0);
+    setAnswers({});
+    setMarkedForReview({});
+    setVisitedQuestions(new Set([0]));
+    setViolations([]);
+    setTabSwitchCount(0);
+    setFullscreenExitCount(0);
+    setScreenshotBlocked(false);
+    return true;
+  };
+
   const resumeTest = (testId?: string): boolean => {
     const id = testId || selectedTest?.id;
     if (!id) return false;
@@ -470,6 +499,10 @@ export function TestProvider({ children }: { children: ReactNode }) {
     setTabSwitchCount(0);
     setFullscreenExitCount(0);
     setScreenshotBlocked(false);
+  };
+
+  const addViolation = (message: string) => {
+    setViolations((prev) => [...prev, message]);
   };
 
   const handleQuestionNavigation = (idx: number) => {
