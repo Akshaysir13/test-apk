@@ -50,13 +50,27 @@ export default function Leaderboard() {
       console.log('All tests in DB:', uniqueTests);
 
       // Filter by course context if present
-      if (courseContext) {
+      if (courseContext && tests.length > 0) {
+        // Normalize course context for comparison (remove "Course" suffix and lowercase)
+        const normalizedCourseContext = courseContext.toLowerCase().replace(/\s+course$/i, '').trim();
+        console.log('Normalized course context:', normalizedCourseContext);
+
         const courseTestNames = tests
-          .filter(t => t.course === courseContext)
+          .filter(t => {
+            const normalizedTestCourse = t.course.toLowerCase().replace(/\s+course$/i, '').trim();
+            return normalizedTestCourse === normalizedCourseContext;
+          })
           .map(t => t.name);
         console.log('Tests in this course:', courseTestNames);
 
-        uniqueTests = uniqueTests.filter(name => courseTestNames.includes(name));
+        // Try case-insensitive matching and partial matching
+        uniqueTests = uniqueTests.filter(dbTestName => 
+          courseTestNames.some(courseTestName => 
+            dbTestName.toLowerCase().includes(courseTestName.toLowerCase()) ||
+            courseTestName.toLowerCase().includes(dbTestName.toLowerCase()) ||
+            dbTestName.toLowerCase() === courseTestName.toLowerCase()
+          )
+        );
         console.log('Filtered tests:', uniqueTests);
       }
 
@@ -78,16 +92,65 @@ export default function Leaderboard() {
 
       if (selectedTest !== 'all') {
         query = query.eq('test_name', selectedTest);
-      } else if (courseContext) {
-        // If showing 'all' keys but within a specific course context, restrict to those tests
+      } else if (courseContext && tests.length > 0) {
+        // If showing 'all' but within a specific course context, restrict to those tests
+        // Normalize course context for comparison
+        const normalizedCourseContext = courseContext.toLowerCase().replace(/\s+course$/i, '').trim();
+        
         const courseTestNames = tests
-          .filter(t => t.course === courseContext)
+          .filter(t => {
+            const normalizedTestCourse = t.course.toLowerCase().replace(/\s+course$/i, '').trim();
+            return normalizedTestCourse === normalizedCourseContext;
+          })
           .map(t => t.name);
 
         console.log('Querying tests:', courseTestNames);
 
         if (courseTestNames.length > 0) {
-          query = query.in('test_name', courseTestNames);
+          // Use case-insensitive and partial matching for the filter
+          const { data: allData, error: allError } = await supabase
+            .from('test_results')
+            .select('*')
+            .order('score', { ascending: false })
+            .order('submitted_at', { ascending: true });
+
+          if (allError) throw allError;
+
+          // Filter in JavaScript with flexible matching
+          const filteredData = allData.filter(result => 
+            courseTestNames.some(courseTestName => 
+              result.test_name.toLowerCase().includes(courseTestName.toLowerCase()) ||
+              courseTestName.toLowerCase().includes(result.test_name.toLowerCase()) ||
+              result.test_name.toLowerCase() === courseTestName.toLowerCase()
+            )
+          );
+
+          console.log('Filtered results count:', filteredData.length);
+
+          // Process the filtered data
+          const bestScores = new Map();
+          filteredData.forEach(result => {
+            const key = `${result.user_email}-${result.test_name}`;
+            if (!bestScores.has(key) || bestScores.get(key).score < result.score) {
+              bestScores.set(key, result);
+            }
+          });
+
+          const entries: LeaderboardEntry[] = Array.from(bestScores.values())
+            .sort((a, b) => b.score - a.score)
+            .map((result, index) => ({
+              rank: index + 1,
+              name: result.user_email,
+              score: result.score,
+              totalQuestions: result.total_questions,
+              percentage: result.percentage,
+              testName: result.test_name,
+              date: new Date(result.submitted_at).toLocaleDateString(),
+            }));
+
+          setLeaderboard(entries);
+          setLoading(false);
+          return;
         } else {
           // No tests for this course, return empty
           setLeaderboard([]);
@@ -182,6 +245,7 @@ export default function Leaderboard() {
               <ul className="list-disc pl-4">
                 <li>Filtered Tests: {availableTests.length}</li>
                 <li>Leaderboard Entries: {leaderboard.length}</li>
+                <li>Total Tests in Context: {tests.length}</li>
               </ul>
             </div>
           </div>
@@ -189,7 +253,8 @@ export default function Leaderboard() {
           <div className="mt-2 border-t border-orange-200 pt-2">
             <p className="font-bold">Test Name Debugging:</p>
             <p>Expected Tests for [{courseContext}]: {tests.filter(t => t.course === courseContext).length}</p>
-            <p className="truncate">Sample Code Names: {tests.filter(t => t.course === courseContext).slice(0, 3).map(t => t.name).join(', ')}</p>
+            <p className="text-xs mt-1">Available in DB: {availableTests.slice(0, 3).join(', ')}</p>
+            <p className="text-xs">Expected from Context: {tests.filter(t => t.course === courseContext).slice(0, 3).map(t => t.name).join(', ')}</p>
           </div>
         </div>
 
