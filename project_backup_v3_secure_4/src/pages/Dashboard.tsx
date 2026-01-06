@@ -69,7 +69,7 @@ export default function Dashboard() {
             </div>
             <div className="flex items-center gap-3">
               <button
-                onClick={() => navigate('/leaderboard', { state: { course: primaryCourse } })}
+                onClick={() => navigate('/Leaderboard', { state: { course: primaryCourse } })}
                 className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 flex items-center gap-2"
               >
                 🏆 Leaderboard
@@ -237,4 +237,5 @@ export default function Dashboard() {
       </div>
     </div>
   );
+
 }
