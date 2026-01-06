@@ -135,7 +135,7 @@ export const foundationTests: Test[] = [
   },
 
   {
-    id: 'foundation-latest-full-mock-1',
+    id: 'foundation-latest-full-mock-1 ( 3.30 hr )',
     name: 'Foundation: Full Mock 1 (2026)',
     description: 'Complete B.Arch Pattern: Aptitude + Math + Drawing',
     duration: 12600, // 3.30 hours (10800 seconds)
@@ -181,7 +181,7 @@ export const foundationTests: Test[] = [
     ]
   },
   {
-    id: 'foundation-latest-full-mock-1',
+    id: 'foundation-latest-full-mock-2 ( 3.30hr )',
     name: 'Foundation: Full Mock 2 (2026)', // Note only description is different in original file, keeping ID same as original though it's likely a bug
     description: 'Complete B.Arch Pattern: Aptitude + Math + Drawing',
     duration: 12600, // 3.30 hours (10800 seconds)
@@ -238,5 +238,6 @@ export const foundationTests: Test[] = [
 
 
 ];
+
 
 
