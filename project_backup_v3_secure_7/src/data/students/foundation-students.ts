@@ -194,9 +194,63 @@ export const foundationStudents: UserAccount[] = [
   approved: true,
   courses: ['foundation']
 }, //taniska
+  { email: 'bhumikashar1807@gmail.com', password: 'bhumika@123', role: 'student', approved: true, courses: ['foundation'] },
+{ email: 'tejasvi.vic@gmail.com', password: 'India@26#', role: 'student', approved: true, courses: ['foundation'] },
+{ email: 'anshikasonakiya955@gmail.com', password: 'Anshika*1', role: 'student', approved: true, courses: ['foundation'] },
+{ email: 'pranaychennupati@gmail.com', password: 'JeeBarch@26', role: 'student', approved: true, courses: ['foundation'] },
+{ email: 'kartikikhude@gmail.com', password: 'Moghes institute ', role: 'student', approved: true, courses: ['foundation'] },
+{ email: 'vsvs.naga.jasmitha@gmail.com', password: 'Jasmitha@2009', role: 'student', approved: true, courses: ['foundation'] },
+{ email: 'swetass8292@gmail.com', password: 'Sweta@62031', role: 'student', approved: true, courses: ['foundation'] },
+{ email: 'Khushbuchaprana@gmail.com', password: 'Khushbu@0410', role: 'student', approved: true, courses: ['foundation'] },
+{ email: 'kumarisakshi52905@gmail.com', password: 'Golgappu', role: 'student', approved: true, courses: ['foundation'] },
+{ email: 'shaikhkarishma654@gmail.com', password: 'Karrshu', role: 'student', approved: true, courses: ['foundation'] },
+{ email: 'manujvaishnav77@gmail.com', password: 'manuj@123', role: 'student', approved: true, courses: ['foundation'] },
+  {
+  email: 'student55@gmail.com',
+  password: 'pass123',
+  role: 'student',
+  approved: true,
+  courses: ['foundation']
+}, //karishma
+  {
+  email: 'student56@gmail.com',
+  password: 'pass123',
+  role: 'student',
+  approved: true,
+  courses: ['foundation']
+},//sakshi
+{ email: 'krushilviramgama243@gmail.com', password: '123456789', role: 'student', approved: true, courses: ['foundation'] },
+{ email: 'sakshimshinde95@gmail.com', password: 'sakshi95+', role: 'student', approved: true, courses: ['foundation'] },
+  {
+  email: 'student57@gmail.com',
+  password: 'pass123',
+  role: 'student',
+  approved: true,
+  courses: ['foundation']
+},//Shewta
+
+  { email: 'pinudesh@gmail.com', password: 'mocktestnavya', role: 'student', approved: true, courses: ['foundation'] },
+{ email: 'anjalisuneja001@gmail.com', password: 'anjaliarch2026', role: 'student', approved: true, courses: ['foundation'] },
+{ email: 'saanviprasad93@gmail.com', password: '@1234', role: 'student', approved: true, courses: ['foundation'] },
+  {
+  email: 'student58@gmail.com',
+  password: 'pass123',
+  role: 'student',
+  approved: true,
+  courses: ['foundation']
+},//padma
+
+  {
+  email: 'student59@gmail.com',
+  password: 'pass123',
+  role: 'student',
+  approved: true,
+  courses: ['foundation']
+},//Shewta
   
 
 ];
+
 
 
 
