@@ -7284,9 +7284,1192 @@ image: "https://drive.google.com/thumbnail?id=1V5C-agMFHEOecIu6XsJONOF8kXRbFEQf&
   question: "You are visitor in zoo, One family is viwing zoo Animals. Draw a scene in your Perspective and colour it.",
   correctOption: "manual_evaluation",
 },
-    
+//TEST 1 April
+  {
+    id: 101,
+    type: 'match-pair',
+    question: "Match the Following",
+    columnAItems: [
+      "1. Mullion",
+      "2. Transom",
+      "3. Clerestory",
+      "4. Skylight/Rooflight"
+],
+    columnBItems: [
+      "Horizontal bar above door/window separating opening",
+      "Vertical bar dividing window/curtain wall panels",
+      "Window installed in roof plane",
+      "High window section above eye level"
+],
+    optionA: "1-D 2-B 3-A 4-C",
+    optionB: "1-B 2-D 3-A 4-C",
+    optionC: "1-B 2-A 3-C 4-D",
+    optionD: "1-B 2-A 3-D 4-C",
+    correctOption: "d"
+  },
+  {
+    id: 102,
+    type: 'match-pair',
+    question: "Match the Following",
+    columnAItems: [
+      "1. Norman Foster",
+      "2. Raj Revel",
+      "3. Skidmore, Owings & Merrill",
+      "4. Daniel Libeskind"
+],
+    columnBItems: [
+      "Millu Bridge",
+      "Jewish Museum",
+      "Engineers India House - New Delhi",
+      "John Hancock Tower"
+],
+    optionA: "1-C 2-B 3-A 4-D",
+    optionB: "1-D 2-A 3-B 4-C",
+    optionC: "1-D 2-B 3-A 4-C",
+    optionD: "1-A 2-C 3-D 4-B",
+    correctOption: "d"
+  },
+  {
+    id: 103,
+    question: "Question Figure shows correct Elevation of Object identify Correct Plan of Object",
+    image: "https://drive.google.com/thumbnail?id=1ggnDd_sG3nI16yiCJYAyEUZg56TEm9JS&sz=w1000",
+    optionA: "d",
+    optionB: "a",
+    optionC: "c",
+    optionD: "b",
+    correctOption: "d"
+  },
+  {
+    id: 104,
+    question: "ITPI stands for?",
+    optionA: "Institute of Town Planning India",
+    optionB: "Indian Technical Planning Institute",
+    optionC: "Infrastructure & Town Policy Institute",
+    optionD: "Institute of Town Planners, India",
+    correctOption: "d"
+  },
+  {
+    id: 105,
+    question: "Identify odd one out",
+    image: "https://drive.google.com/thumbnail?id=1LpP0GZXLjGlcMTXTAyR7EVdXobo9cUPA&sz=w1000",
+    optionA: "a",
+    optionB: "c",
+    optionC: "b",
+    optionD: "d",
+    correctOption: "d"
+  },
+  {
+    id: 106,
+    question: "The horizontal flat surface of a step in a staircase is called:",
+    optionA: "Riser",
+    optionB: "Nosing",
+    optionC: "Tread",
+    optionD: "Soffit",
+    correctOption: "c"
+  },
+  {
+    id: 107,
+    question: "identift the correct view in the direction of arrow",
+    image: "https://drive.google.com/thumbnail?id=1fhwG4LrJWP3QygIxjOqEbrhKRiCYL-kb&sz=w1000",
+    optionA: "c",
+    optionB: "b",
+    optionC: "a",
+    optionD: "d",
+    correctOption: "d"
+  },
+  {
+    id: 108,
+    question: "Identify Famous temple",
+    image: "https://drive.google.com/thumbnail?id=1qqpbUS4py4xVr5vyg0byNMr9zVqdi8yF&sz=w1000",
+    optionA: "minnakshi temple",
+    optionB: "Arunachaleshwer temple",
+    optionC: "Rameshwaram Temple",
+    optionD: "Chidambaram Nataraj temple",
+    correctOption: "d"
+  },
+  {
+    id: 109,
+    question: "A split-complementary colour scheme consists of:",
+    optionA: "One colour and its two neighbours on the colour wheel",
+    optionB: "One colour and the two colours adjacent to its direct complement",
+    optionC: "Three equally spaced colours on the colour wheel",
+    optionD: "Four colours forming a rectangle on the colour wheel",
+    correctOption: "b"
+  },
+  {
+    id: 110,
+    question: "Zaha Hadid's use of computational tools to generate non-linear geometry is associated with which style?",
+    optionA: "Brutalism",
+    optionB: "High-Tech Architecture",
+    optionC: "Parametricism",
+    optionD: "Organic Architecture",
+    correctOption: "c"
+  },
+  {
+    id: 111,
+    question: "S1: A colonnade is a row of evenly spaced columns supporting a roof or entablature along a walkway or building facade. S2: Colonnades are found only in ancient Greek and Roman architecture and are never used in modern buildings.",
+    optionA: "Both true",
+    optionB: "Both false",
+    optionC: "S1 true, S2 false",
+    optionD: "S1 false, S2 true",
+    correctOption: "c"
+  },
+  {
+    id: 112,
+    question: "Which city features the \"Finger Plan\" with transit corridors?",
+    optionA: "Stockholm",
+    optionB: "Copenhagen",
+    optionC: "Amsterdam",
+    optionD: "Oslo",
+    correctOption: "b"
+  },
+  {
+    id: 113,
+    question: "Which architectural term describes the arrangement and design of windows and openings in a building?",
+    optionA: "Massing",
+    optionB: "Cladding",
+    optionC: "Fenestration",
+    optionD: "Articulation",
+    correctOption: "c"
+  },
+  {
+    id: 114,
+    question: "S1: Value in colour theory refers to the lightness or darkness of a colour. S2: A tint is created by adding white to a pure colour, increasing its value.",
+    optionA: "Both true, S2 explains S1",
+    optionB: "Both true, S2 does not explain S1",
+    optionC: "S1 true, S2 false",
+    optionD: "S1 false, S2 true",
+    correctOption: "b"
+  },
+  {
+    id: 115,
+    question: "The term used to describe the principal exterior face of a building is:",
+    optionA: "Elevation",
+    optionB: "Facade",
+    optionC: "Section",
+    optionD: "Plan",
+    correctOption: "b"
+  },
+  {
+    id: 116,
+    question: "Question Figure shows correct plan of Object identify Correct Elevation of Object",
+    image: "https://drive.google.com/thumbnail?id=1QlrKwpuyYtZdepzewrzF646wDRjcjhhw&sz=w1000",
+    optionA: "c",
+    optionB: "d",
+    optionC: "a",
+    optionD: "b",
+    correctOption: "d"
+  },
+  {
+    id: 117,
+    question: "The Konark Sun Temple is designed in the form of:",
+    optionA: "A seven-storey pyramid",
+    optionB: "A chariot with 24 wheels pulled by 7 horses",
+    optionC: "A lotus flower with 12 petals",
+    optionD: "A boat sailing on the sea",
+    correctOption: "b"
+  },
+  {
+    id: 118,
+    question: "S1: A shade is created by adding black to a pure hue. S2: A tone is created by adding white to a pure hue.",
+    optionA: "Both true",
+    optionB: "Both false",
+    optionC: "S1 true, S2 false",
+    optionD: "S1 false, S2 true",
+    correctOption: "c"
+  },
+  {
+    id: 119,
+    question: "Mirror is Place In Place of X Identify Correct mirror image of Question figure",
+    image: "https://drive.google.com/thumbnail?id=1Bk_ogOfPgYRPtoltKIAiiurnmB_eTw-B&sz=w1000",
+    optionA: "d",
+    optionB: "a",
+    optionC: "c",
+    optionD: "b",
+    correctOption: "d"
+  },
+  {
+    id: 120,
+    type: 'match-pair',
+    question: "Match the Following",
+    columnAItems: [
+      "1. Havelock Bridge",
+      "2. Dibang Bridge",
+      "3. Vidyasagar Setu",
+      "4. Mahatma Gandhi Setu"
+],
+    columnBItems: [
+      "Patna, Bihar",
+      "Kolkata, West Bengal",
+      "Andhra Pradesh",
+      "Arunachal Pradesh"
+],
+    optionA: "1-B 2-D 3-C 4-A",
+    optionB: "1-D 2-A 3-C 4-B",
+    optionC: "1-B 2-A 3-C 4-D",
+    optionD: "1-C 2-D 3-B 4-A",
+    correctOption: "d"
+  },
+  {
+    id: 121,
+    question: "Which of the following building materials is obtained by burning limestone at high temperatures?",
+    optionA: "Cement",
+    optionB: "Lime",
+    optionC: "Plaster of Paris",
+    optionD: "Fly ash",
+    correctOption: "b"
+  },
+  {
+    id: 122,
+    question: "The Kandariya Mahadeva Temple at Khajuraho is a celebrated example of which temple style?",
+    optionA: "Dravidien",
+    optionB: "Vesara",
+    optionC: "Hoysala",
+    optionD: "Nagara",
+    correctOption: "d"
+  },
+  {
+    id: 123,
+    type: 'match-pair',
+    question: "Match the Following",
+    columnAItems: [
+      "1. Amer Fort",
+      "2. Chittorgarh Fort",
+      "3. Dhamek Stupa",
+      "4. Bada/Chhota Imambara"
+],
+    columnBItems: [
+      "Lucknow",
+      "Chittor",
+      "Jaipur",
+      "Sarnath"
+],
+    optionA: "1-C 2-D 3-B 4-A",
+    optionB: "1-B 2-A 3-C 4-D",
+    optionC: "1-B 2-D 3-A 4-C",
+    optionD: "1-C 2-B 3-D 4-A",
+    correctOption: "d"
+  },
+  {
+    id: 124,
+    question: "Question Figure shows correct plan of Object identify Correct Elevation of Object",
+    image: "https://drive.google.com/thumbnail?id=1YvOAhVvNyqmBBLuRhOz_EsySOIJhmEE1&sz=w1000",
+    optionA: "a",
+    optionB: "c",
+    optionC: "d",
+    optionD: "b",
+    correctOption: "d"
+  },
+  {
+    id: 125,
+    question: "Mirror is Place In Place of X Identify Correct mirror image of Question figure",
+    image: "https://drive.google.com/thumbnail?id=1mucYL9YHzc9b6BPRhIagQIxaDuljiSMz&sz=w1000",
+    optionA: "b",
+    optionB: "d",
+    optionC: "c",
+    optionD: "a",
+    correctOption: "d"
+  },
+  {
+    id: 126,
+    question: "Read the instruction Carefully",
+    image: "https://drive.google.com/thumbnail?id=1CsQAD-Gmdj0c4kjRSw_b_1KImgfQ--PQ&sz=w1000",
+    optionA: "a",
+    optionB: "b",
+    optionC: "d",
+    optionD: "c",
+    correctOption: "d"
+  },
+  {
+    id: 127,
+    question: "Mirror is Place In Place of X Identify Correct mirror image of Question figure",
+    image: "https://drive.google.com/thumbnail?id=1_6OHJ2kXRv65N6WyKrnRK4ImWUTy9PdS&sz=w1000",
+    optionA: "b",
+    optionB: "a",
+    optionC: "d",
+    optionD: "c",
+    correctOption: "d"
+  },
+  {
+    id: 128,
+    question: "identift the correct view in the direction of arrow",
+    image: "https://drive.google.com/thumbnail?id=17BpV_GP1GJZZIjU59k1qK7Z5r23GeTaH&sz=w1000",
+    optionA: "c",
+    optionB: "a",
+    optionC: "b",
+    optionD: "d",
+    correctOption: "d"
+  },
+  {
+    id: 129,
+    question: "Who was the first architect to receive the Pritzker Architecture Prize in 1979?",
+    optionA: "Le Corbusier",
+    optionB: "Philip Johnson",
+    optionC: "Louis Kahn",
+    optionD: "Frank Lloyd Wright",
+    correctOption: "b"
+  },
+  {
+    id: 130,
+    question: "Indentify Famous Church",
+    image: "https://drive.google.com/thumbnail?id=1AjnqEU7_oSMynF-pfO8Lgu92CNNRP1vF&sz=w1000",
+    optionA: "Note Re dam Cathedral",
+    optionB: "Duram Cathedral",
+    optionC: "The Abby",
+    optionD: "The Whestminister Abby",
+    correctOption: "d"
+  },
+  {
+    id: 131,
+    question: "Which were the FIRST sites from India added to the UNESCO World Heritage List?",
+    optionA: "Taj Mahal & Agra Fort only",
+    optionB: "Ajanta Caves, Ellora Caves, Agra Fort & Taj Mahal",
+    optionC: "Ellora Caves",
+    optionD: "Khajuraho & Sanchi",
+    correctOption: "b"
+  },
+  {
+    id: 132,
+    question: "NIST stands for?",
+    optionA: "National Infrastructure Survey Team",
+    optionB: "National Institute for Science and Technology",
+    optionC: "National Information & Safety Training",
+    optionD: "National Institute of Standards and Technology",
+    correctOption: "d"
+  },
+  {
+    id: 133,
+    type: 'match-pair',
+    question: "Match the Following",
+    columnAItems: [
+      "1. Gypsum Board/Drywall",
+      "2. Plaster (Cement/Lime)",
+      "3. Paint/Coating",
+      "4. Bitumen/Asphalt"
+],
+    columnBItems: [
+      "Liquid pigment+binder applied to surfaces",
+      "Plaster core between paper liners",
+      "Mixture applied wet, hardens to smooth finish",
+      "Viscous petroleum derivative"
+],
+    optionA: "1-B 2-D 3-C 4-A",
+    optionB: "1-A 2-C 3-B 4-D",
+    optionC: "1-C 2-D 3-B 4-A",
+    optionD: "1-B 2-C 3-A 4-D",
+    correctOption: "d"
+  },
+  {
+    id: 134,
+    question: "Identify City Sky line",
+    image: "https://drive.google.com/thumbnail?id=1PkYnQ0qrAEvwxqG14PQWXklJygP7jt6m&sz=w1000",
+    optionA: "Las Vegus City",
+    optionB: "New York City",
+    optionC: "Chicago City",
+    optionD: "Seatal City",
+    correctOption: "d"
+  },
+  {
+    id: 135,
+    question: "River sand is preferred over sea sand in construction because:",
+    optionA: "River sand has larger particle size",
+    optionB: "Sea sand contains salts that cause corrosion of steel and efflorescence in walls",
+    optionC: "River sand is cheaper and more easily available",
+    optionD: "Sea sand has higher moisture content making it difficult to use",
+    correctOption: "b"
+  },
+  {
+    id: 136,
+    question: "Historic Event year of American Independence was at?",
+    optionA: "4th July 1773",
+    optionB: "4th July 1774",
+    optionC: "4th July 1775",
+    optionD: "4th July 1776",
+    correctOption: "d"
+  },
+  {
+    id: 137,
+    question: "Frank Gehry won the Pritzker Prize in 1989. His winning was largely influenced by his working style of:",
+    optionA: "Climate-responsive sustainable design",
+    optionB: "Deconstructivist sculptural titanium-clad forms",
+    optionC: "Minimalist glass and steel modernism",
+    optionD: "Humanistic modernism with warm natural materials",
+    correctOption: "b"
+  },
+  {
+    id: 138,
+    question: "Which structural member is primarily designed to resist bending forces?",
+    optionA: "Column",
+    optionB: "Footing",
+    optionC: "Wall",
+    optionD: "Beam",
+    correctOption: "d"
+  },
+  {
+    id: 139,
+    question: "S1: \"Scale 1:100\" means 1 unit on drawing equals 100 units in reality. S2: Larger scale drawings (like 1:50) show less detail than smaller scales (like 1:500).",
+    optionA: "Both true",
+    optionB: "Both false",
+    optionC: "S1 true, S2 false",
+    optionD: "S1 false, S2 true",
+    correctOption: "c"
+  },
+  {
+    id: 140,
+    question: "identift the correct view in the direction of arrow",
+    image: "https://drive.google.com/thumbnail?id=1AfTArobnIldbGUcz9fSUK1gRUUo398P-&sz=w1000",
+    optionA: "a",
+    optionB: "c",
+    optionC: "b",
+    optionD: "d",
+    correctOption: "d"
+  },
+  {
+    id: 141,
+    question: "Count the number of surfaces",
+    image: "https://drive.google.com/thumbnail?id=1QMZmYtLmxqbDAN4NWaSldaAxwkjrH7Mm&sz=w1000",
+    optionA: "16",
+    optionB: "19",
+    optionC: "18",
+    optionD: "17",
+    correctOption: "d"
+  },
+  {
+    id: 142,
+    type: 'match-pair',
+    question: "Match the Following",
+    columnAItems: [
+      "1. Chicago",
+      "2. Scotland",
+      "3. Prague",
+      "4. Vienna"
+],
+    columnBItems: [
+      "City of 100 Spires, Golden City",
+      "Imperial City, Atomic City",
+      "Land of Cakes",
+      "Windy City"
+],
+    optionA: "1-A 2-D 3-C 4-B",
+    optionB: "1-C 2-D 3-A 4-B",
+    optionC: "1-D 2-C 3-B 4-A",
+    optionD: "1-D 2-C 3-A 4-B",
+    correctOption: "d"
+  },
+  {
+    id: 143,
+    question: "10. In the Northern Hemisphere, ideal tree placement for shading is on the...?",
+    optionA: "East side",
+    optionB: "West side",
+    optionC: "North side",
+    optionD: "South side",
+    correctOption: "d"
+  },
+  {
+    id: 144,
+    question: "16. In winter, the sun takes a...?",
+    optionA: "High arc",
+    optionB: "Full circle",
+    optionC: "No arc",
+    optionD: "Low arc",
+    correctOption: "d"
+  },
+  {
+    id: 145,
+    type: 'match-pair',
+    question: "Match the Following",
+    columnAItems: [
+      "1. Thiruvalluvar Statue",
+      "2. Mahatma Gandhi Statue",
+      "3. Jogimara Cave",
+      "4. Dancing Girl"
+],
+    columnBItems: [
+      "Gandhi Maidan, Patna",
+      "Kanyakumari, Tamil Nadu",
+      "Mohenjo-daro",
+      "Chhattisgarh"
+],
+    optionA: "1-D 2-A 3-C 4-B",
+    optionB: "1-B 2-C 3-A 4-D",
+    optionC: "1-D 2-C 3-B 4-A",
+    optionD: "1-B 2-A 3-D 4-C",
+    correctOption: "d"
+  },
+  {
+    id: 146,
+    question: "identift the correct view in the direction of arrow",
+    image: "https://drive.google.com/thumbnail?id=1lfXa_uZWr98r4dZkPev7OIgANaqyNF0q&sz=w1000",
+    optionA: "a",
+    optionB: "c",
+    optionC: "b",
+    optionD: "d",
+    correctOption: "d"
+  },
+  {
+    id: 147,
+    type: 'match-pair',
+    question: "Match the Following",
+    columnAItems: [
+      "1. Minimalism (c. 1990–present)",
+      "2. Eco-Architecture/Sustainable Design (c. 1990–present)",
+      "3. Parametricism (c. 2000–present)",
+      "4. Neo-Futurism (c. 2000–present)"
+],
+    columnBItems: [
+      "Style reducing form, material, detail to essential elements",
+      "Style using algorithms to generate complex, adaptive forms",
+      "Style envisioning dynamic, technological, sustainable urban futures",
+      "Approach prioritizing environmental performance, resource efficiency"
+],
+    optionA: "1-C 2-B 3-A 4-D",
+    optionB: "1-D 2-B 3-A 4-C",
+    optionC: "1-C 2-B 3-D 4-A",
+    optionD: "1-A 2-D 3-B 4-C",
+    correctOption: "d"
+  },
+  {
+    id: 148,
+    type: 'match-pair',
+    question: "Match the Following",
+    columnAItems: [
+      "1. Stylobate",
+      "2. Peristyle",
+      "3. Clerestory",
+      "4. Oculus"
+],
+    columnBItems: [
+      "A row of windows placed high in a wall above the roofline of an adjacent lower section to admit light into the interior.",
+      "The top step of the stepped platform or base on which a row of classical columns stands directly.",
+      "A continuous row of columns surrounding the exterior of a temple or enclosing a courtyard or garden.",
+      "A circular opening or window at the crown of a dome or in a wall admitting light into the space below or beyond."
+],
+    optionA: "1-A 2-D 3-B 4-C",
+    optionB: "1-A 2-D 3-C 4-B",
+    optionC: "1-C 2-B 3-A 4-D",
+    optionD: "1-B 2-C 3-A 4-D",
+    correctOption: "d"
+  },
+  {
+    id: 149,
+    type: 'match-pair',
+    question: "Match the Following",
+    columnAItems: [
+      "1. Norman Foster",
+      "2. John Utzon",
+      "3. Lauri Baker",
+      "4. Achyut Kanvinde"
+],
+    columnBItems: [
+      "Sydney Opera House - Australia",
+      "Low Cost Housing - Auroville",
+      "Wembley Stadium - London",
+      "NII - Pune"
+],
+    optionA: "1-A 2-C 3-D 4-B",
+    optionB: "1-C 2-D 3-A 4-B",
+    optionC: "1-A 2-B 3-C 4-D",
+    optionD: "1-C 2-A 3-B 4-D",
+    correctOption: "d"
+  },
+  {
+    id: 150,
+    question: "Identify Famous Statue",
+    image: "https://drive.google.com/thumbnail?id=1dglqzKYZSZYA0FEOGbalxo8ypBW7V9gq&sz=w1000",
+    optionA: "The Satue of Unity",
+    optionB: "The Statue Of Pieata",
+    optionC: "Satue of Liberty",
+    optionD: "Christ the Redemmer",
+    correctOption: "d"
+  },
+   {
+    id: 101,
+    question: "Read the instruction carefully",
+    image: "https://drive.google.com/thumbnail?id=1eH28mFaiLab22LbIwL_3avClI-RMcbUc&sz=w1000",
+    optionA: "d",
+    optionB: "b",
+    optionC: "a",
+    optionD: "c",
+    correctOption: "d"
+  },
+  {
+    id: 102,
+    question: "Which of the Following Architect Design the Given Building",
+    image: "https://drive.google.com/thumbnail?id=1-qslk06bEsAbJd-YI5Aq76qrekg2MzHJ&sz=w1000",
+    optionA: "Le Corbosier",
+    optionB: "Raj Rewal",
+    optionC: "C P Kuckreja",
+    optionD: "Louis Kahn",
+    correctOption: "d"
+  },
+  {
+    id: 103,
+    question: "Read the instruction carefully",
+    image: "https://drive.google.com/thumbnail?id=1FBWGl63t3qItP-higcOTl6RPmXFm1B1F&sz=w1000",
+    optionA: "d",
+    optionB: "c",
+    optionC: "b",
+    optionD: "a",
+    correctOption: "d"
+  },
+  {
+    id: 104,
+    question: "Read the instruction carefully",
+    image: "https://drive.google.com/thumbnail?id=1Cu6IgdYfox0nv2A1lkOeWdMWO-coO8hS&sz=w1000",
+    optionA: "d",
+    optionB: "b",
+    optionC: "a",
+    optionD: "c",
+    correctOption: "d"
+  },
+  {
+    id: 105,
+    question: "Read the instruction carefully",
+    image: "https://drive.google.com/thumbnail?id=1R8HRryKD21fLchZL_9hZnWTemIFC-R63&sz=w1000",
+    optionA: "a",
+    optionB: "b",
+    optionC: "c",
+    optionD: "d",
+    correctOption: "d"
+  },
+  {
+    id: 106,
+    type: 'match-pair',
+    question: "Match the Following",
+    columnAItems: [
+      "1. Lime",
+      "2. Bamboo",
+      "3. Straw/Thatch",
+      "4. Rammed Earth"
+],
+    columnBItems: [
+      "Fast-growing grass with hollow culms",
+      "Compacted subsoil (clay, sand, gravel) in formwork",
+      "Dried stalks of grain plants",
+      "Calcium oxide/hydroxide from limestone"
+],
+    optionA: "1-A 2-C 3-D 4-B",
+    optionB: "1-D 2-A 3-B 4-C",
+    optionC: "1-D 2-C 3-A 4-B",
+    optionD: "1-D 2-A 3-C 4-B",
+    correctOption: "d"
+  },
+  {
+    id: 107,
+    question: "A plot of 150 m × 75 m is drawn on a map at a scale of 1:500. What is the size on paper?",
+    optionA: "3 cm × 1.5 cm",
+    optionB: "30 m × 15 m",
+    optionC: "3 m × 1.5 m",
+    optionD: "0.3 m × 0.15 m",
+    correctOption: "d"
+  },
+  {
+    id: 108,
+    question: "Who is an architect of IIM Kolkata Bridge",
+    optionA: "Le Corbusier",
+    optionB: "IM Pei",
+    optionC: "CP Kukreja",
+    optionD: "Christopher Benninger",
+    correctOption: "d"
+  },
+  {
+    id: 109,
+    question: "Architecture should speak of its time and place, but learn for timelessness. is Quated by ?",
+    optionA: "Philip Johnson",
+    optionB: "Sydney Pollack",
+    optionC: "Human Centered Design",
+    optionD: "Frank Gehry",
+    correctOption: "d"
+  },
+  {
+    id: 110,
+    question: "Read the instruction carefully",
+    image: "https://drive.google.com/thumbnail?id=1OnY6zbzpu-ZX0Tn5nBv3gYYkKlTuxTAk&sz=w1000",
+    optionA: "d",
+    optionB: "b",
+    optionC: "c",
+    optionD: "a",
+    correctOption: "d"
+  },
+  {
+    id: 111,
+    question: "Read the instruction carefully",
+    image: "https://drive.google.com/thumbnail?id=1dkpb24StqHxHcHSwCLMIQIZewFSi00wn&sz=w1000",
+    optionA: "c",
+    optionB: "d",
+    optionC: "a",
+    optionD: "b",
+    correctOption: "d"
+  },
+  {
+    id: 112,
+    question: "Read the instruction carefully",
+    image: "https://drive.google.com/thumbnail?id=1vdONElSdAtsqRp7Ri22d8qe4hZIpQELM&sz=w1000",
+    optionA: "a",
+    optionB: "c",
+    optionC: "d",
+    optionD: "b",
+    correctOption: "d"
+  },
+  {
+    id: 113,
+    question: "Read the instruction carefully",
+    image: "https://drive.google.com/thumbnail?id=1yv1jJ8pamXFRSt6i3ChDB2TA1XkoTNBt&sz=w1000",
+    optionA: "b",
+    optionB: "d",
+    optionC: "a",
+    optionD: "c",
+    correctOption: "d"
+  },
+  {
+    id: 114,
+    question: "Read the instruction carefully",
+    image: "https://drive.google.com/thumbnail?id=1eYyZmMHFx74oyS1qS5Ln3EKpOLiGj3CU&sz=w1000",
+    optionA: "b",
+    optionB: "a",
+    optionC: "d",
+    optionD: "c",
+    correctOption: "d"
+  },
+  {
+    id: 115,
+    question: "Read the instruction carefully",
+    image: "https://drive.google.com/thumbnail?id=1NuAg2GNPXinooniZXqzdf1qccqAoyloV&sz=w1000",
+    optionA: "b",
+    optionB: "a",
+    optionC: "c",
+    optionD: "d",
+    correctOption: "d"
+  },
+  {
+    id: 116,
+    question: "Read the instruction carefully",
+    image: "https://drive.google.com/thumbnail?id=1QYZF9zlAXPOsXP9GHf0qInJ1sOx8lbCa&sz=w1000",
+    optionA: "d",
+    optionB: "b",
+    optionC: "c",
+    optionD: "a",
+    correctOption: "d"
+  },
+  {
+    id: 117,
+    question: "Read the instruction carefully",
+    image: "https://drive.google.com/thumbnail?id=1YBuXyD3nzKWHmkFZmPS7LbnjiKsEeQ1_&sz=w1000",
+    optionA: "c",
+    optionB: "a",
+    optionC: "d",
+    optionD: "b",
+    correctOption: "d"
+  },
+  {
+    id: 118,
+    type: 'match-pair',
+    question: "Match the Following",
+    columnAItems: [
+      "1. Aedicule",
+      "2. Balcony",
+      "3. Bay",
+      "4. Bracket"
+],
+    columnBItems: [
+      "Altar surrounds, window treatments",
+      "Facade composition, structural grids",
+      "Cornice support, furniture, shelves",
+      "Residential facades, theaters"
+],
+    optionA: "1-A 2-B 3-D 4-C",
+    optionB: "1-C 2-B 3-D 4-A",
+    optionC: "1-B 2-D 3-A 4-C",
+    optionD: "1-A 2-D 3-B 4-C",
+    correctOption: "d"
+  },
+  {
+    id: 119,
+    question: "Read the instruction carefully",
+    image: "https://drive.google.com/thumbnail?id=1ZnvulWH66KsyQNK3b6uhDq_Q47sDJ61Q&sz=w1000",
+    optionA: "d",
+    optionB: "c",
+    optionC: "b",
+    optionD: "a",
+    correctOption: "d"
+  },
+  {
+    id: 120,
+    question: "Read the instruction carefully",
+    image: "https://drive.google.com/thumbnail?id=1kHm5ZXktoTYmbZQpYs3QlV0DYpIfH0pa&sz=w1000",
+    optionA: "c",
+    optionB: "a",
+    optionC: "d",
+    optionD: "b",
+    correctOption: "d"
+  },
+  {
+    id: 121,
+    question: "Read the instruction carefully",
+    image: "https://drive.google.com/thumbnail?id=1VNfIK-Pun1HUkaMX5dwtkIWxS5TRHnMr&sz=w1000",
+    optionA: "d",
+    optionB: "c",
+    optionC: "b",
+    optionD: "a",
+    correctOption: "d"
+  },
+  {
+    id: 122,
+    type: 'match-pair',
+    question: "Match the Following",
+    columnAItems: [
+      "1. Atrium",
+      "2. Facade",
+      "3. Fenestration",
+      "4. Cantilever"
+],
+    columnBItems: [
+      "A large open-roofed or skylit central hall inside a building rising through multiple floors with natural light from above.",
+      "A structural element projecting horizontally beyond its support without any support at its free outer end.",
+      "The principal exterior face of a building usually the front elevation facing a street or public open space.",
+      "The arrangement proportion and design of windows and openings in a building's wall or facade."
+],
+    optionA: "1-D 2-B 3-A 4-C",
+    optionB: "1-B 2-A 3-C 4-D",
+    optionC: "1-B 2-D 3-A 4-C",
+    optionD: "1-A 2-C 3-D 4-B",
+    correctOption: "d"
+  },
+  {
+    id: 123,
+    type: 'match-pair',
+    question: "Match the Following",
+    columnAItems: [
+      "1. Gothic Architecture",
+      "2. Roman Architecture",
+      "3. Greek Architecture",
+      "4. Islamic Architecture"
+],
+    columnBItems: [
+      "Use of Doric, Ionic, and Corinthian column orders.",
+      "Extensive use of arches, domes, and concrete construction.",
+      "Domes, minarets, arches, and geometric ornamentation.",
+      "Pointed arches, ribbed vaults, flying buttresses, stained glass."
+],
+    optionA: "1-B 2-D 3-C 4-A",
+    optionB: "1-C 2-A 3-D 4-B",
+    optionC: "1-B 2-C 3-A 4-D",
+    optionD: "1-D 2-B 3-A 4-C",
+    correctOption: "d"
+  },
+  {
+    id: 124,
+    question: "Statement 1: A truss is a structural framework of triangular units.\nStatement 2: A cantilever is a beam supported at both ends.",
+    optionA: "Both Statement 1 and Statement 2 are True.",
+    optionB: "Statement 1 is False,  Statement 2 is True",
+    optionC: "Both Statement 1 and Statement 2 is False",
+    optionD: "Statement 1 is True,  Statement 2 is False",
+    correctOption: "d"
+  },
+  {
+    id: 125,
+    question: "Read the instruction carefully",
+    image: "https://drive.google.com/thumbnail?id=1Og1AZTYRHWwCBHYZ9FrgQ6cSNfFEE1KJ&sz=w1000",
+    optionA: "b",
+    optionB: "c",
+    optionC: "a",
+    optionD: "d",
+    correctOption: "d"
+  },
+  {
+    id: 126,
+    question: "Read the instruction carefully",
+    image: "https://drive.google.com/thumbnail?id=1TA2Ar55gAi8_ImmHmdCZeqAa0ssyUGZ4&sz=w1000",
+    optionA: "c",
+    optionB: "d",
+    optionC: "a",
+    optionD: "b",
+    correctOption: "d"
+  },
+  {
+    id: 127,
+    type: 'match-pair',
+    question: "Match the Following",
+    columnAItems: [
+      "1. Brief/Program",
+      "2. Site Analysis",
+      "3. Massing",
+      "4. Floor Plan"
+],
+    columnBItems: [
+      "Evaluation of physical, legal, environmental context",
+      "Horizontal section cut at ~1.2m showing spatial layout",
+      "Document outlining client requirements, scope, constraints",
+      "Three-dimensional composition of building volumes"
+],
+    optionA: "1-B 2-C 3-D 4-A",
+    optionB: "1-D 2-B 3-C 4-A",
+    optionC: "1-D 2-C 3-A 4-B",
+    optionD: "1-C 2-A 3-D 4-B",
+    correctOption: "d"
+  },
+  {
+    id: 128,
+    question: "Read the instruction carefully",
+    image: "https://drive.google.com/thumbnail?id=1D9hry-K74Oc65Lt1tZ5zOz-DC68haqTt&sz=w1000",
+    optionA: "a",
+    optionB: "b",
+    optionC: "d",
+    optionD: "c",
+    correctOption: "d"
+  },
+  {
+    id: 129,
+    type: 'match-pair',
+    question: "Match the Following",
+    columnAItems: [
+      "1. Footing",
+      "2. Grade Beam",
+      "3. Shear Wall",
+      "4. Curtain Wall"
+],
+    columnBItems: [
+      "Supports walls, ties footings, resists soil pressure",
+      "Distributes column/wall loads to soil safely",
+      "Weather barrier, aesthetic facade, admits light",
+      "Provides structural stability, limits sway"
+],
+    optionA: "1-C 2-D 3-A 4-B",
+    optionB: "1-A 2-D 3-C 4-B",
+    optionC: "1-B 2-C 3-D 4-A",
+    optionD: "1-B 2-A 3-D 4-C",
+    correctOption: "d"
+  },
+  {
+    id: 130,
+    type: 'match-pair',
+    question: "Match the Following",
+    columnAItems: [
+      "1. Clerestory",
+      "2. Colonnade",
+      "3. Column",
+      "4. Cornice"
+],
+    columnBItems: [
+      "Classical buildings, interior crown molding",
+      "Temples, porticos, interior spaces",
+      "St. Peter's Square, classical facades",
+      "Naves of churches, modern sustainable design"
+],
+    optionA: "1-A 2-B 3-D 4-C",
+    optionB: "1-D 2-C 3-A 4-B",
+    optionC: "1-D 2-C 3-A 4-B",
+    optionD: "1-D 2-C 3-B 4-A",
+    correctOption: "d"
+  },
+  {
+    id: 131,
+    question: "Who is an architect of Jewish Museum",
+    optionA: "Hafeez Contractor",
+    optionB: "Zaha Hadid",
+    optionC: "Antonio Gaudí",
+    optionD: "Daniel Libeskind",
+    correctOption: "d"
+  },
+  {
+    id: 132,
+    question: "Read the instruction carefully",
+    image: "https://drive.google.com/thumbnail?id=1azHzsUw9GRmYTwv0mwuJxE9BozZqSsnm&sz=w1000",
+    optionA: "b",
+    optionB: "a",
+    optionC: "c",
+    optionD: "d",
+    correctOption: "d"
+  },
+  {
+    id: 133,
+    question: "Read the instruction carefully",
+    image: "https://drive.google.com/thumbnail?id=1NvXGClIHb3eZkpVVCxE0wi4yxLaYT61d&sz=w1000",
+    optionA: "b",
+    optionB: "a",
+    optionC: "c",
+    optionD: "d",
+    correctOption: "d"
+  },
+  {
+    id: 134,
+    question: "Read the instruction carefully",
+    image: "https://drive.google.com/thumbnail?id=1Xf3u9zZeTi8po2imfa1xMzVQBypJNfag&sz=w1000",
+    optionA: "b",
+    optionB: "c",
+    optionC: "a",
+    optionD: "d",
+    correctOption: "d"
+  },
+  {
+    id: 135,
+    question: "Statement 1: Vision scale is about how an object looks from up close.\nStatement 2: It helps design large signage or city facades.",
+    optionA: "B. Both S1 and S2 are false",
+    optionB: "C. S1 is true, S2 is false",
+    optionC: "A. Both S1 and S2 are true",
+    optionD: "D. S1 is false, S2 is true",
+    correctOption: "d"
+  },
+  {
+    id: 136,
+    question: "Statement 1: The sun path in the Southern Hemisphere curves northward.\nStatement 2: The sun appears in the northern sky throughout the day.",
+    optionA: "D. S1 is false, but S2 is true",
+    optionB: "B. Both statements are true, but S2 is not the correct explanation of S1",
+    optionC: "C. S1 is true, but S2 is false",
+    optionD: "A. Both statements are true, and S2 is the correct explanation of S1",
+    correctOption: "d"
+  },
+  {
+    id: 137,
+    question: "Statement 1: The primary colors in the additive color model are red, green, and blue.\nStatement 2: In the subtractive color model, the primary colors are cyan, magenta, and yellow.",
+    optionA: "Statement 1 is True,  Statement 2 is False",
+    optionB: "Both Statement 1 and Statement 2 is False",
+    optionC: "Statement 1 is False,  Statement 2 is True",
+    optionD: "Both Statement 1 and Statement 2 are True.",
+    correctOption: "d"
+  },
+  {
+    id: 138,
+    question: "HUDCO stands for?",
+    optionA: "Housing & Urban Development Council",
+    optionB: "Housing and Utility Department Corporation",
+    optionC: "Human Development Company",
+    optionD: "Housing and Urban Development Corporation",
+    correctOption: "d"
+  },
+  {
+    id: 139,
+    question: "Read the instruction carefully",
+    image: "https://drive.google.com/thumbnail?id=1CxIpeXPn9e2y7d2yVTvDYS1f-xgMs2HN&sz=w1000",
+    optionA: "d",
+    optionB: "b",
+    optionC: "a",
+    optionD: "c",
+    correctOption: "d"
+  },
+  {
+    id: 140,
+    question: "Read the instruction carefully",
+    image: "https://drive.google.com/thumbnail?id=1nj7mj03f_SzBb9NsdfzW-iLAIJXqa9bO&sz=w1000",
+    optionA: "c",
+    optionB: "a",
+    optionC: "b",
+    optionD: "d",
+    correctOption: "d"
+  },
+  {
+    id: 141,
+    question: "A residential building has 10 floors. The height of ground floor is 5 meter (including length and slab thickness). Rest all other floors are of 4.5 meter high (including slab thickness). What is the total height of the building (from ground to terrace) in meters?",
+    optionA: "46.5",
+    optionB: "45",
+    optionC: "46",
+    optionD: "45.5",
+    correctOption: "d"
+  },
+  {
+    id: 142,
+    question: "Read the instruction carefully",
+    image: "https://drive.google.com/thumbnail?id=115BW-zFLS3Jh_NQY0dC6A0UTqytolw4y&sz=w1000",
+    optionA: "c",
+    optionB: "a",
+    optionC: "d",
+    optionD: "b",
+    correctOption: "d"
+  },
+  {
+    id: 143,
+    question: "Read the instruction carefully",
+    image: "https://drive.google.com/thumbnail?id=1zUPvWAahWuMLWjyxZbyEIUbGshYSJrei&sz=w1000",
+    optionA: "b",
+    optionB: "a",
+    optionC: "d",
+    optionD: "c",
+    correctOption: "d"
+  },
+  {
+    id: 144,
+    question: "Statement 1: Jean Nouvel designed the Louvre Abu Dhabi.\nStatement 2: He also designed the Torre Agbar in Barcelona.",
+    optionA: "Statement 1 is True,  Statement 2 is False",
+    optionB: "Statement 1 is False,  Statement 2 is True",
+    optionC: "Both Statement 1 and Statement 2 is False",
+    optionD: "Both Statement 1 and Statement 2 are True.",
+    correctOption: "d"
+  },
+  {
+    id: 145,
+    type: 'match-pair',
+    question: "Match the Following",
+    columnAItems: [
+      "1. Tread",
+      "2. Handrail",
+      "3. Baluster/Railing",
+      "4. Door"
+],
+    columnBItems: [
+      "Graspable rail along stair/ramp edge",
+      "Vertical posts supporting handrail",
+      "Movable barrier in wall opening",
+      "Horizontal part of step where foot is placed"
+],
+    optionA: "1-D 2-A 3-C 4-B",
+    optionB: "1-D 2-B 3-C 4-A",
+    optionC: "1-D 2-B 3-C 4-A",
+    optionD: "1-D 2-A 3-B 4-C",
+    correctOption: "d"
+  },
+  {
+    id: 146,
+    question: "Read the instruction carefully",
+    image: "https://drive.google.com/thumbnail?id=1fVWWyC8PoMDL1DaiGIz28DBYkLMGk5BT&sz=w1000",
+    optionA: "c",
+    optionB: "b",
+    optionC: "a",
+    optionD: "d",
+    correctOption: "d"
+  },
+  {
+    id: 147,
+    question: "Read the instruction carefully",
+    image: "https://drive.google.com/thumbnail?id=1aZLYTKeaGqtSHJmW9Fw1zHntIIo7L3ma&sz=w1000",
+    optionA: "c",
+    optionB: "a",
+    optionC: "d",
+    optionD: "b",
+    correctOption: "d"
+  },
+  {
+    id: 148,
+    question: "Read the instruction carefully",
+    image: "https://drive.google.com/thumbnail?id=1RTibcTZtgxkW3YNR7Efo0O7RpLSADWXi&sz=w1000",
+    optionA: "c",
+    optionB: "b",
+    optionC: "d",
+    optionD: "a",
+    correctOption: "d"
+  },
+  {
+    id: 149,
+    question: "Read the instruction carefully",
+    image: "https://drive.google.com/thumbnail?id=1pUw0SqrHcK7ZJuyUIKJ90hQct39phNpB&sz=w1000",
+    optionA: "d",
+    optionB: "a",
+    optionC: "c",
+    optionD: "b",
+    correctOption: "d"
+  },
+  {
+    id: 150,
+    question: "Read the instruction carefully",
+    image: "https://drive.google.com/thumbnail?id=1NH04eTpfsn7yNC5B4xtaiD_nihD2aFif&sz=w1000",
+    optionA: "a",
+    optionB: "d",
+    optionC: "c",
+    optionD: "b",
+    correctOption: "d"
+  },
 
 ];
+
 
 
 
