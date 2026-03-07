@@ -5,7 +5,6 @@ import { Question, ShuffledQuestion, Test, TestCategory, TestAttempt } from "../
 // 📦 IMPORT ALL TESTS FROM DATA FILES
 // ==========================================
 import { foundationTests } from "../data/tests/foundation-tests";
-import { foundationTopicTests } from "../data/tests/foundation-topic-tests";
 import { rankBoosterTests } from "../data/tests/rank-booster-tests";
 import { dheyaTests } from "../data/tests/dheya-tests";
 import { advance2026Tests } from "../data/tests/advance-2026-tests";
@@ -72,7 +71,6 @@ export const testCategories: TestCategory[] = [
 
 const initialTests: Test[] = [
   ...foundationTests,
-  ...foundationTopicTests,
   ...rankBoosterTests,
   ...dheyaTests,
   ...advance2026Tests,
