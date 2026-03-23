@@ -7882,7 +7882,9 @@ image: "https://drive.google.com/thumbnail?id=1V5C-agMFHEOecIu6XsJONOF8kXRbFEQf&
     optionD: "Christ the Redemmer",
     correctOption: "d"
   },
-   {
+
+//Test 2 April
+     {
     id: 101,
     question: "Read the instruction carefully",
     image: "https://drive.google.com/thumbnail?id=1eH28mFaiLab22LbIwL_3avClI-RMcbUc&sz=w1000",
@@ -8467,7 +8469,8 @@ image: "https://drive.google.com/thumbnail?id=1V5C-agMFHEOecIu6XsJONOF8kXRbFEQf&
     optionD: "b",
     correctOption: "d"
   },
-  {
+//TEST 3 April
+      {
     id: 101,
     question: "Read the instruction carefully",
     image: "https://drive.google.com/thumbnail?id=15Vr-e_WnQrxaWE08kg0RYGerM036lQPg&sz=w1000",
@@ -9054,6 +9057,7 @@ image: "https://drive.google.com/thumbnail?id=1V5C-agMFHEOecIu6XsJONOF8kXRbFEQf&
     correctOption: "d"
   },
 
+    //Test 4 April
       {
     id: 101,
     question: "Indentify the following Building",
@@ -9666,8 +9670,1396 @@ image: "https://drive.google.com/thumbnail?id=1V5C-agMFHEOecIu6XsJONOF8kXRbFEQf&
     optionD: "1-C 2-B 3-A 4-D",
     correctOption: "d"
   },
-];
 
+    //Full Mock 1 April
+     {
+    id: 101,
+    type: 'match-pair',
+    question: "Match the Pair",
+    columnAItems: [
+      "1. Postmodern",
+      "2. Deconstructivism",
+      "3. Contemporary",
+      "4. Industrial"
+],
+    columnBItems: [
+      "- Lack of symmetry",
+      "- Fluid, innovative designs",
+      "- Large windows and minimal decor",
+      "- Bright colors and unusual shapes"
+],
+    optionA: "1-A 2-D 3-C 4-B",
+    optionB: "1-A 2-C 3-D 4-B",
+    optionC: "1-B 2-A 3-D 4-C",
+    optionD: "1-D 2-A 3-B 4-C",
+    correctOption: "d"
+  },
+  {
+    id: 102,
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1f9zAZrnUZvRJaXLA5rVZVq9VfU75xHER&sz=w1000",
+    optionA: "D",
+    optionB: "A",
+    optionC: "C",
+    optionD: "B",
+    correctOption: "d"
+  },
+  {
+    id: 103,
+    question: "find the missing ?",
+    image: "https://drive.google.com/thumbnail?id=1kyRB3jYANi1i8rjotF9N5Vt4U6_mWOEC&sz=w1000",
+    optionA: "C",
+    optionB: "D",
+    optionC: "B",
+    optionD: "A",
+    correctOption: "d"
+  },
+  {
+    id: 104,
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1LvG9pRRoR68kS5LlcO2trpoMZ74fLXp5&sz=w1000",
+    optionA: "B",
+    optionB: "D",
+    optionC: "C",
+    optionD: "A",
+    correctOption: "d"
+  },
+  {
+    id: 105,
+    question: "Which supports wall sideways?",
+    optionA: "Buttress",
+    optionB: "Lintel",
+    optionC: "Slab",
+    optionD: "Sill",
+    correctOption: "a"
+  },
+  {
+    id: 106,
+    question: "find the odd one",
+    image: "https://drive.google.com/thumbnail?id=1hEL4hDEZwCy06APFl21bkzgNb7gZVYOq&sz=w1000",
+    optionA: "B",
+    optionB: "C",
+    optionC: "D",
+    optionD: "A",
+    correctOption: "d"
+  },
+  {
+    id: 107,
+    type: 'match-pair',
+    question: "Match the Pair",
+    columnAItems: [
+      "1. Los Angeles",
+      "2. Beijing",
+      "3. Geneva",
+      "4. \"Swaraj hamara janmsiddh adhikar aur main use pake rahenge\""
+],
+    columnBItems: [
+      "Peace Capital",
+      "Forbidden City",
+      "City of Angels",
+      "Lokmanya Tilak"
+],
+    optionA: "1-D 2-B 3-C 4-A",
+    optionB: "1-B 2-C 3-D 4-A",
+    optionC: "1-D 2-A 3-B 4-C",
+    optionD: "1-C 2-B 3-A 4-D",
+    correctOption: "d"
+  },
+  {
+    id: 108,
+    question: "Find next in series",
+    image: "https://drive.google.com/thumbnail?id=1XDh2NKC3ur7X3iDEMv5lOjhaQksNh5LK&sz=w1000",
+    optionA: "A",
+    optionB: "C",
+    optionC: "B",
+    optionD: "D",
+    correctOption: "d"
+  },
+  {
+    id: 109,
+    question: "What is \"biophilic design\"?",
+    optionA: "Design Incorporating Natural Elements To Connect People With Nature",
+    optionB: "Using Only Artificial Materials",
+    optionC: "Designing For Extreme Climates",
+    optionD: "Focusing Only On Technology",
+    correctOption: "a"
+  },
+  {
+    id: 110,
+    question: "IEQ stands for?",
+    optionA: "Indoor Environmental Quotient",
+    optionB: "Internal Engineering Quality",
+    optionC: "Indoor Environmental Quality",
+    optionD: "Indoor Environmental Quality",
+    correctOption: "d"
+  },
+  {
+    id: 111,
+    question: "Read the instruction",
+    image: "https://drive.google.com/thumbnail?id=1Z9VuP1SYpiZVLMmnIAX9aTOjN7OolF4N&sz=w1000",
+    optionA: "A",
+    optionB: "B",
+    optionC: "D",
+    optionD: "C",
+    correctOption: "d"
+  },
+  {
+    id: 112,
+    question: "Who is an architect of BITS Pilani - Goa",
+    optionA: "Joseph Allen Stein",
+    optionB: "Raj Revel",
+    optionC: "Charles Correa",
+    optionD: "Hafeez Contractor",
+    correctOption: "d"
+  },
+  {
+    id: 113,
+    question: "Raj Ghat is Located at Which of the following City ?",
+    optionA: "Jaipur",
+    optionB: "Ujjain",
+    optionC: "Pune",
+    optionD: "New Delhi",
+    correctOption: "d"
+  },
+  {
+    id: 114,
+    question: "S1: Fatehpur Sikri was built by Emperor Akbar and served as the Mughal capital for a brief period before being abandoned. S2: Fatehpur Sikri showcases a unique blend of Hindu and Islamic architectural styles reflecting Akbar's syncretic approach.",
+    optionA: "Both True, S2 Explains S1",
+    optionB: "Both True, S2 Does Not Explain S1",
+    optionC: "S1 True, S2 False",
+    optionD: "S1 False, S2 True",
+    correctOption: "d"
+  },
+  {
+    id: 115,
+    question: "find front view of figure",
+    image: "https://drive.google.com/thumbnail?id=1TKz7H0oiqToS_Iqg5ARMJxnaF4SNyPkf&sz=w1000",
+    optionA: "C",
+    optionB: "B",
+    optionC: "D",
+    optionD: "A",
+    correctOption: "d"
+  },
+  {
+    id: 116,
+    question: "find missing ?",
+    image: "https://drive.google.com/thumbnail?id=1ee9tpAWzM26oV7EObbjSHxkiEQhUuWxt&sz=w1000",
+    optionA: "A",
+    optionB: "B",
+    optionC: "C",
+    optionD: "D",
+    correctOption: "d"
+  },
+  {
+    id: 117,
+    question: "15 floors: Ground floor = 4.1 m, upper floors = 3.3 m each. Total building height (m)?",
+    optionA: "51.3",
+    optionB: "49.8",
+    optionC: "50.3",
+    optionD: "50.8",
+    correctOption: "d"
+  },
+  {
+    id: 118,
+    question: "Which of the following best describes \"gamut\" in color terminology?",
+    optionA: "The Brightness Of A Color",
+    optionB: "The Range Of Colors A Device Can Reproduce",
+    optionC: "The Saturation Level Of A Color",
+    optionD: "The Temperature Of A Light Source",
+    correctOption: "b"
+  },
+  {
+    id: 119,
+    question: "Identify the Correct  Architectural Terms used",
+    image: "https://drive.google.com/thumbnail?id=1eg3aUCG165PTf8JAk_o_63khtlA-2Aq1&sz=w1000",
+    optionA: "Mansard Roof",
+    optionB: "Brace",
+    optionC: "Architectural Symmetry",
+    optionD: "Bay",
+    correctOption: "d"
+  },
+  {
+    id: 120,
+    type: 'match-pair',
+    question: "Match the Pair",
+    columnAItems: [
+      "1. Capital",
+      "2. Column",
+      "3. Pilaster",
+      "4. Plinth"
+],
+    columnBItems: [
+      "A vertical cylindrical structural or decorative member consisting of a base shaft and capital supporting loads above.",
+      "A flat rectangular column-like element projecting slightly from a wall surface used decoratively to suggest a column.",
+      "The lowest projecting base on which a column building or statue stands giving it elevation and visual stability.",
+      "The topmost decorative or structural element of a column sitting between the shaft and the entablature above."
+],
+    optionA: "1-D 2-B 3-C 4-A",
+    optionB: "1-D 2-C 3-B 4-A",
+    optionC: "1-D 2-B 3-A 4-C",
+    optionD: "1-D 2-A 3-B 4-C",
+    correctOption: "d"
+  },
+  {
+    id: 121,
+    question: "Who is an architect of LIC Building - New Delhi",
+    optionA: "Sharat Das",
+    optionB: "Anant Raje",
+    optionC: "Cp Kukreja",
+    optionD: "Charles Correa",
+    correctOption: "d"
+  },
+  {
+    id: 122,
+    question: "50. Marble's primary mineral component is?",
+    optionA: "Quartz",
+    optionB: "Feldspar",
+    optionC: "Mica",
+    optionD: "Calcite",
+    correctOption: "d"
+  },
+  {
+    id: 123,
+    type: 'match-pair',
+    question: "Match the Pair",
+    columnAItems: [
+      "1. Amarnath Cave",
+      "2. Bagh Caves",
+      "3. Bearded Man",
+      "4. Olmec Colossal Head"
+],
+    columnBItems: [
+      "Pahalgam, Jammu & Kashmir",
+      "Mexico",
+      "Madhya Pradesh",
+      "Mohenjo-daro"
+],
+    optionA: "1-C 2-B 3-D 4-A",
+    optionB: "1-D 2-A 3-B 4-C",
+    optionC: "1-D 2-B 3-A 4-C",
+    optionD: "1-A 2-C 3-D 4-B",
+    correctOption: "d"
+  },
+  {
+    id: 124,
+    question: "What is a \"gradient\" in digital design?",
+    optionA: "A Single Solid Color",
+    optionB: "A Gradual Blend Between Two Or More Colors",
+    optionC: "A High-Contrast Color Pair",
+    optionD: "A Desaturated Color Scheme",
+    correctOption: "b"
+  },
+  {
+    id: 125,
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1jWjpl6Y6vRuiL8CJPTu9sSYm-nq1pcO2&sz=w1000",
+    optionA: "B",
+    optionB: "C",
+    optionC: "A",
+    optionD: "D",
+    correctOption: "d"
+  },
+  {
+    id: 126,
+    question: "Read the instruction bR",
+    image: "https://drive.google.com/thumbnail?id=1geqf58-eYghPWlerdY5p6DaEWgoj8W58&sz=w1000",
+    optionA: "D",
+    optionB: "C",
+    optionC: "B",
+    optionD: "A",
+    correctOption: "d"
+  },
+  {
+    id: 127,
+    question: "Indo-Saracenic Architecture blends which three elements?",
+    optionA: "Baroque, Mughal, And Classical",
+    optionB: "Hindu, Buddhist, And Colonial",
+    optionC: "Indian, Islamic, And Gothic",
+    optionD: "Roman, Greek, And Islamic",
+    correctOption: "c"
+  },
+  {
+    id: 128,
+    question: "find mirror on given axis",
+    image: "https://drive.google.com/thumbnail?id=1cB20z_0gt8rlzriJiVvkSScngkx20Ehc&sz=w1000",
+    optionA: "C",
+    optionB: "D",
+    optionC: "B",
+    optionD: "A",
+    correctOption: "d"
+  },
+  {
+    id: 129,
+    question: "Identify the Correct  Architectural Terms used",
+    image: "https://drive.google.com/thumbnail?id=11BV28nU23lq1YW1kviRmzsIdpZZ5gCUu&sz=w1000",
+    optionA: "Palladian Window",
+    optionB: "Roofline",
+    optionC: "Pediment",
+    optionD: "Elizabethan Architecture",
+    correctOption: "d"
+  },
+  {
+    id: 130,
+    question: "Cuba Is Famously Known For ?",
+    optionA: "The Big Smoke",
+    optionB: "City Of Vines",
+    optionC: "Land Of A Thousand Lakes",
+    optionD: "Sugar Bowl Of The World",
+    correctOption: "d"
+  },
+  {
+    id: 131,
+    question: "Famous Sardar Sarovar Lake is located at ?",
+    optionA: "Jammu Kashmir",
+    optionB: "Andhra Pradesh",
+    optionC: "Manipur",
+    optionD: "Gujarat",
+    correctOption: "d"
+  },
+  {
+    id: 132,
+    question: "Identify the famous Monument",
+    image: "https://drive.google.com/thumbnail?id=1y5ZOfVU0Y33wbMSBXxBFDNW6mOO_KlTn&sz=w1000",
+    optionA: "Eiffel Tower",
+    optionB: "Space Needle",
+    optionC: "Empire State Building",
+    optionD: "Atomium",
+    correctOption: "d"
+  },
+  {
+    id: 133,
+    question: "find surface count",
+    image: "https://drive.google.com/thumbnail?id=1UXhzdy5ZN7a5NUA67bQ28IRyaH1QL0sb&sz=w1000",
+    optionA: "22",
+    optionB: "23",
+    optionC: "20",
+    optionD: "21",
+    correctOption: "d"
+  },
+  {
+    id: 134,
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1I-LRYke1hNWcrYO5ohe_zhb_PlIFjkxy&sz=w1000",
+    optionA: "D",
+    optionB: "B",
+    optionC: "A",
+    optionD: "C",
+    correctOption: "d"
+  },
+  {
+    id: 135,
+    question: "INDENTIFY THE FAMOUS TEMPLE",
+    image: "https://drive.google.com/thumbnail?id=1C5OwyglVFTy7yLUQyQI2l49xG_wFxA8b&sz=w1000",
+    optionA: "Vitthala Temple",
+    optionB: "Hazara Rama Temple",
+    optionC: "Virupaksha Temple",
+    optionD: "Pattabhirama Temple",
+    correctOption: "c"
+  },
+  {
+    id: 136,
+    question: "INDENTIFY THE FAMOUS CHURCH",
+    image: "https://drive.google.com/thumbnail?id=1Zvbk8d5ZdbBoTvrDbPi02-1qFVYDfZ2F&sz=w1000",
+    optionA: "Ulm Minster",
+    optionB: "Cologne Cathedral",
+    optionC: "Berlin Cathedral",
+    optionD: "Speyer Cathedral",
+    correctOption: "b"
+  },
+  {
+    id: 137,
+    question: "Which term refers to the size of a building or its elements in relation to the human body or surrounding context?",
+    optionA: "Proportion",
+    optionB: "Massing",
+    optionC: "Scale",
+    optionD: "Rhythm",
+    correctOption: "d"
+  },
+  {
+    id: 138,
+    question: "find the odd one number",
+    image: "https://drive.google.com/thumbnail?id=1nJna6JZOj0BYL3XSLcbrXeYvWH0hLVGS&sz=w1000",
+    optionA: "A",
+    optionB: "C",
+    optionC: "B",
+    optionD: "D",
+    correctOption: "d"
+  },
+  {
+    id: 139,
+    question: "Who is an architect of Mantri Pinnacle - Bangalore",
+    optionA: "Raj Revel",
+    optionB: "Pierre Jeanneret",
+    optionC: "Bv Doshi",
+    optionD: "Hafeez Contractor",
+    correctOption: "d"
+  },
+  {
+    id: 140,
+    question: "Statement 1: The color red is often associated with warmth and energy.\nStatement 2: The color blue is often associated with calmness and tranquility.",
+    optionA: "Statement 1 Is True, Statement 2 Is False",
+    optionB: "Statement 1 Is False, Statement 2 Is True",
+    optionC: "Both Statement 1 And Statement 2 Is False",
+    optionD: "Both Statement 1 And Statement 2 Are True.",
+    correctOption: "d"
+  },
+  {
+    id: 141,
+    type: 'match-pair',
+    question: "Match the Pair",
+    columnAItems: [
+      "1. Vincent van Gogh",
+      "2. Michelangelo",
+      "3. Rembrandt",
+      "4. Leonardo da Vinci"
+],
+    columnBItems: [
+      "- Bedroom in Arles",
+      "- Statue of Pietà",
+      "- Adoration of the Magi",
+      "- The Blinding of Samson"
+],
+    optionA: "1-D 2-A 3-C 4-B",
+    optionB: "1-B 2-D 3-C 4-A",
+    optionC: "1-D 2-A 3-B 4-C",
+    optionD: "1-A 2-B 3-D 4-C",
+    correctOption: "d"
+  },
+  {
+    id: 142,
+    question: "S1: The Antarala is a vestibule or transitional space between the Garbhagriha and the Mandapa in a Hindu temple. S2: The Antarala serves as a spatial buffer between the sacred inner sanctum and the public gathering hall of the temple.",
+    optionA: "Both True, S2 Explains S1",
+    optionB: "Both True, S2 Does Not Explain S1",
+    optionC: "S1 True, S2 False",
+    optionD: "S1 False, S2 True",
+    correctOption: "b"
+  },
+  {
+    id: 143,
+    question: "find visible surface count",
+    image: "https://drive.google.com/thumbnail?id=1Vj_-2L2JG748P6hlQErb1W1NyuhP1zwI&sz=w1000",
+    optionA: "17",
+    optionB: "18",
+    optionC: "15",
+    optionD: "16",
+    correctOption: "d"
+  },
+  {
+    id: 144,
+    question: "Which material was predominantly used in the construction of the Taj Mahal?",
+    optionA: "Red Sandstone",
+    optionB: "Granite",
+    optionC: "White Marble",
+    optionD: "Limestone",
+    correctOption: "c"
+  },
+  {
+    id: 145,
+    type: 'match-pair',
+    question: "Match the Pair",
+    columnAItems: [
+      "1. Cladding",
+      "2. Service Duct",
+      "3. Brick",
+      "4. Concrete"
+],
+    columnBItems: [
+      "Composite material of cement, aggregates, and water widely used in structural construction.",
+      "Vertical or horizontal shaft used for mechanical and utility services.",
+      "External layer applied to a building for protection or decoration.",
+      "Artificial masonry unit made from clay, commonly used for walls and pavements."
+],
+    optionA: "1-C 2-B 3-A 4-D",
+    optionB: "1-C 2-A 3-D 4-B",
+    optionC: "1-C 2-A 3-B 4-D",
+    optionD: "1-C 2-B 3-D 4-A",
+    correctOption: "d"
+  },
+  {
+    id: 146,
+    question: "Statement 1: The color wheel was first developed by Sir Isaac Newton.\nStatement 2: Secondary colors are created by mixing two primary colors.",
+    optionA: "Statement 1 Is False, Statement 2 Is True",
+    optionB: "Statement 1 Is True, Statement 2 Is False",
+    optionC: "Both Statement 1 And Statement 2 Is False",
+    optionD: "Both Statement 1 And Statement 2 Are True.",
+    correctOption: "d"
+  },
+  {
+    id: 147,
+    question: "complete the pattern",
+    image: "https://drive.google.com/thumbnail?id=1qN6aK5jYiux4izfzwZcGqboFWQUaUzct&sz=w1000",
+    optionA: "C",
+    optionB: "A",
+    optionC: "B",
+    optionD: "D",
+    correctOption: "d"
+  },
+  {
+    id: 148,
+    question: "find top view of figure",
+    image: "https://drive.google.com/thumbnail?id=1NCo9e3YlxUDBVpk0W9SdT9cUy7rtpKg8&sz=w1000",
+    optionA: "B",
+    optionB: "A",
+    optionC: "D",
+    optionD: "C",
+    correctOption: "d"
+  },
+  {
+    id: 149,
+    question: "Read the instruction coding",
+    image: "https://drive.google.com/thumbnail?id=1kUJ9UNiC4ZuQmLjg_e9BR3CBWjuBNcfU&sz=w1000",
+    optionA: "B",
+    optionB: "A",
+    optionC: "C",
+    optionD: "D",
+    correctOption: "d"
+  },
+  {
+    id: 150,
+    question: "IMF",
+    optionA: "International Maritime Forum",
+    optionB: "International Media Foundation",
+    optionC: "Integrated Market Facility",
+    optionD: "International Monetary Fund",
+    correctOption: "d"
+  },
+  {
+    id: 201,
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1t05HcBotZChrKKGSCb2ey2NIpHe_-z8P&sz=w1000",
+    optionA: "",
+    optionB: "b",
+    optionC: "a",
+    optionD: "d",
+    correctOption: "d"
+  },
+  {
+    id: 202,
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1t1eTP0ME5HpE1aQMeoDlIyfFS4ejCInH&sz=w1000",
+    optionA: "b",
+    optionB: "a",
+    optionC: "c",
+    optionD: "d",
+    correctOption: "d"
+  },
+  {
+    id: 203,
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1t1mDZyHHxAyFg0xObzLi0EXGK42a3OaY&sz=w1000",
+    optionA: "a",
+    optionB: "c",
+    optionC: "b",
+    optionD: "d",
+    correctOption: "d"
+  },
+  {
+    id: 204,
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1t4MLefRQDwaaiDHJYSK8ziEzBNPjClun&sz=w1000",
+    optionA: "a",
+    optionB: "b",
+    optionC: "c",
+    optionD: "d",
+    correctOption: "d"
+  },
+  {
+    id: 205,
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1t8Cdz09FNeFbsoSb5pTSM8IebSfZFFUk&sz=w1000",
+    optionA: "d",
+    optionB: "c",
+    optionC: "b",
+    optionD: "a",
+    correctOption: "d"
+  },
+  {
+    id: 206,
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1tCfH-5y5qQohu6L8jTi9RLNxPMz9z5tY&sz=w1000",
+    optionA: "a",
+    optionB: "c",
+    optionC: "b",
+    optionD: "d",
+    correctOption: "d"
+  },
+  {
+    id: 207,
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1tIrevPFYdKEywX0CHe0QLpm6cVvAeXyO&sz=w1000",
+    optionA: "a",
+    optionB: "d",
+    optionC: "b",
+    optionD: "c",
+    correctOption: "d"
+  },
+  {
+    id: 208,
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1tPeqEXx_V7-RJu-_8CUBFXUi3ZMjYSCW&sz=w1000",
+    optionA: "d",
+    optionB: "c",
+    optionC: "a",
+    optionD: "b",
+    correctOption: "d"
+  },
+  {
+    id: 209,
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1tPhCmkRBGU4y_Td3AoeJGX_rCGPRA4D9&sz=w1000",
+    optionA: "a",
+    optionB: "c",
+    optionC: "d",
+    optionD: "b",
+    correctOption: "d"
+  },
+  {
+    id: 210,
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1tWC6pgOuiGtcu1psJJSDCE3aKys53nwQ&sz=w1000",
+    optionA: "c",
+    optionB: "d",
+    optionC: "b",
+    optionD: "a",
+    correctOption: "d"
+  },
+  {
+    id: 211,
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1tWfRlWMg8-S7k8r5VNYCIxkAczXojJAR&sz=w1000",
+    optionA: "d",
+    optionB: "b",
+    optionC: "c",
+    optionD: "a",
+    correctOption: "d"
+  },
+  {
+    id: 212,
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1tWns20vn1-9eKBeML2kCwqpH3jz1zcQp&sz=w1000",
+    optionA: "d",
+    optionB: "a",
+    optionC: "b",
+    optionD: "c",
+    correctOption: "d"
+  },
+  {
+    id: 213,
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1tbSMWBPUI4xbKlEfvZUyB0JeXM-KW-Fv&sz=w1000",
+    optionA: "a",
+    optionB: "d",
+    optionC: "c",
+    optionD: "b",
+    correctOption: "d"
+  },
+  {
+    id: 214,
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1tcV412knhiknLUkGMbOGI1_Rduh8R1Nl&sz=w1000",
+    optionA: "b",
+    optionB: "d",
+    optionC: "a",
+    optionD: "c",
+    correctOption: "d"
+  },
+  {
+    id: 215,
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1tk2eFl1xMV5T6JlrN3l14tFdh9yI6m8X&sz=w1000",
+    optionA: "b",
+    optionB: "c",
+    optionC: "a",
+    optionD: "d",
+    correctOption: "d"
+  },
+  {
+    id: 216,
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1tnoKeJ76al25RtXaKIWFSlu_vCl8bba7&sz=w1000",
+    optionA: "d",
+    optionB: "a",
+    optionC: "b",
+    optionD: "c",
+    correctOption: "d"
+  },
+  {
+    id: 217,
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1tsj-t2FWiZRdn3IEoPMrHr3xY0K-mOK4&sz=w1000",
+    optionA: "b",
+    optionB: "c",
+    optionC: "a",
+    optionD: "d",
+    correctOption: "d"
+  },
+  {
+    id: 218,
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1tvOYkZdNnYQu9KnQxUsINEhhyi5232ay&sz=w1000",
+    optionA: "d",
+    optionB: "a",
+    optionC: "b",
+    optionD: "c",
+    correctOption: "d"
+  },
+  {
+    id: 219,
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1tykY_CS5yAQL_ZYQ9OhuWyrr2zB-otM-&sz=w1000",
+    optionA: "c",
+    optionB: "a",
+    optionC: "b",
+    optionD: "d",
+    correctOption: "d"
+  },
+  {
+    id: 220,
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1u5Nfk-m6-8MmiKsyuJdLEwwFAELwRaHS&sz=w1000",
+    optionA: "b",
+    optionB: "c",
+    optionC: "a",
+    optionD: "d",
+    correctOption: "d"
+  },
+  {
+    id: 301,
+    type: 'numeric',
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1u7QMw5JN5Sjn78H9LU9B_-07v6AcCb5y&sz=w1000",
+
+    correctOption: "240"
+  },
+  {
+    id: 302,
+    type: 'numeric',
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1uAWHUJsbEBj49eu5hPtMOMxVAMV6Ubjz&sz=w1000",
+
+    correctOption: "6699"
+  },
+  {
+    id: 303,
+    type: 'numeric',
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1uLoCvdAcAWkttCZuYWqq2hqX2ZbhNfD1&sz=w1000",
+
+    correctOption: "16"
+  },
+  {
+    id: 304,
+    type: 'numeric',
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1ucXypdlLYv3vPrAHnN_xJLgQV_xOVU9w&sz=w1000",
+
+    correctOption: "75"
+  },
+  {
+    id: 305,
+    type: 'numeric',
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1unzGPmW1nfPZdnDX4EihalLnSHAQSt3j&sz=w1000",
+  
+    correctOption: "51"
+  },
+  {
+    id: 401,
+    question: "Draw Proportionate sketch of Given Image with Black and white Rendering Method.",
+    image: "https://drive.google.com/thumbnail?id=1fCvzh2quOO8cE9KxTRkWc_GuNz9kjE2p&sz=w1000",
+
+    correctOption: "manual_evaluation"
+  },
+  {
+    id: 402,
+    question: "Draw a detailed sketch of a traditional weekly village bazaar (haat). Show rows of colourfulstalls selling vegetables, pottery, clothes etc , villagers happily bargaining  and cattle tied near the entrance. Use suitable colours.",
+
+    correctOption: "manual_evaluation"
+  },
+//TEST 5 Aptitude April
+    {
+    id: 1,
+    question: "Find next in series",
+    image: "https://drive.google.com/thumbnail?id=1YgFOkQbdX7cQS8fhsv8tJntqi6m4PmVL&sz=w1000",
+    optionA: "a",
+    optionB: "d",
+    optionC: "c",
+    optionD: "b",
+    correctOption: "d"
+  },
+  {
+    id: 2,
+    type: 'match-pair',
+    question: "Match the Pair",
+    columnAItems: [
+      "1. WHO Formation",
+      "2. Verselis treaty",
+      "3. Vienna Treaty",
+      "4. American Independence"
+],
+    columnBItems: [
+      "7th April 1948",
+      "1815",
+      "1918-1919",
+      "4th July 1776"
+],
+    optionA: "1-B 2-C 3-D 4-A",
+    optionB: "1-A 2-D 3-B 4-C",
+    optionC: "1-A 2-D 3-C 4-B",
+    optionD: "1-A 2-C 3-B 4-D",
+    correctOption: "d"
+  },
+  {
+    id: 3,
+    question: "The term used to describe the principal exterior face of a building is:",
+    optionA: "Elevation",
+    optionB: "Facade",
+    optionC: "Section",
+    optionD: "Plan",
+    correctOption: "b"
+  },
+  {
+    id: 4,
+    type: 'match-pair',
+    question: "Match the Pair",
+    columnAItems: [
+      "1. Sun temple",
+      "2. Champaner Pavagadh archaeological parks",
+      "3. Humayun's tomb",
+      "4. Pinjore Garden"
+],
+    columnBItems: [
+      "Delhi",
+      "Panchkula, Haryana",
+      "Panchmahal, Gujarat",
+      "Konark, Orissa"
+],
+    optionA: "1-C 2-A 3-B 4-D",
+    optionB: "1-A 2-C 3-B 4-D",
+    optionC: "1-D 2-A 3-C 4-B",
+    optionD: "1-D 2-C 3-A 4-B",
+    correctOption: "d"
+  },
+  {
+    id: 5,
+    question: "The Baroque architectural style originated in the 17th century in which country?",
+    optionA: "France",
+    optionB: "England",
+    optionC: "Spain",
+    optionD: "Italy",
+    correctOption: "d"
+  },
+  {
+    id: 6,
+    question: "The Pritzker Architecture Prize was established by the Hyatt Foundation in which year?",
+    optionA: "1965",
+    optionB: "1973",
+    optionC: "1979",
+    optionD: "1985",
+    correctOption: "c"
+  },
+  {
+    id: 7,
+    question: "Which school of design, founded in Germany in 1919, profoundly shaped modern architecture?",
+    optionA: "École des Beaux-Arts",
+    optionB: "Bauhaus",
+    optionC: "Cranbrook Academy",
+    optionD: "Vkhutemas",
+    correctOption: "b"
+  },
+  {
+    id: 8,
+    question: "7. Human scale is based on?",
+    optionA: "Artistic ratios",
+    optionB: "Astronomical sizes",
+    optionC: "Machine measurements",
+    optionD: "Average body proportions",
+    correctOption: "d"
+  },
+  {
+    id: 9,
+    question: "PMUY",
+    optionA: "Pradhan Mantri Urja Yojana",
+    optionB: "Pradhan Mantri Utthan Yojana",
+    optionC: "Pradhan Mantri Unnat Yojana",
+    optionD: "Pradhan Mantri Ujjwala Yojana",
+    correctOption: "d"
+  },
+  {
+    id: 10,
+    question: "A colour scheme that uses two colours directly opposite each other on the colour wheel is called:",
+    optionA: "Analogous",
+    optionB: "Triadic",
+    optionC: "Complementary",
+    optionD: "Split-complementary",
+    correctOption: "c"
+  },
+  {
+    id: 11,
+    question: "Identify the Correct  Architectural Terms used",
+    image: "https://drive.google.com/thumbnail?id=13Py58-j-R22LppNhEe8heNROoM2JvawW&sz=w1000",
+    optionA: "Portico",
+    optionB: "Saltbox Roof",
+    optionC: "Frieze",
+    optionD: "Pagoda",
+    correctOption: "d"
+  },
+  {
+    id: 12,
+    question: "Which architect is famous for the \"Barcelona Pavilion\"?",
+    optionA: "Walter Gropius",
+    optionB: "Mies van der Rohe",
+    optionC: "Alvar Aalto",
+    optionD: "Frank Lloyd Wright",
+    correctOption: "b"
+  },
+  {
+    id: 13,
+    question: "Which of the Following Architect Design the Given Building",
+    image: "https://drive.google.com/thumbnail?id=1fPqg-AMta1USr2rLLMbJ7o-WbHJfqxW_&sz=w1000",
+    optionA: "KT Ravindran",
+    optionB: "Raj Rewal",
+    optionC: "P Guggernet",
+    optionD: "Charles Correa",
+    correctOption: "d"
+  },
+  {
+    id: 14,
+    type: 'match-pair',
+    question: "Match the Pair",
+    columnAItems: [
+      "1. \"Aram haram hai\"",
+      "2. \"Jai Jagat\"",
+      "3. \"Sare Jahan Se Achha Ye Hindustan Hamara\"",
+      "4. \"Jai Hind\""
+],
+    columnBItems: [
+      "Jawaharlal Nehru",
+      "Vinoba Bhave",
+      "Netaji Subhas Chandra Bose",
+      "Mohammad Iqbal"
+],
+    optionA: "1-D 2-C 3-A 4-B",
+    optionB: "1-D 2-A 3-B 4-C",
+    optionC: "1-A 2-C 3-B 4-D",
+    optionD: "1-A 2-B 3-D 4-C",
+    correctOption: "d"
+  },
+  {
+    id: 15,
+    type: 'match-pair',
+    question: "Match the Pair",
+    columnAItems: [
+      "1. Trombay",
+      "2. Katni",
+      "3. Nashik",
+      "4. Surat"
+],
+    columnBItems: [
+      "Atomic Research Center",
+      "Cement",
+      "Diamonds",
+      "Security Printing"
+],
+    optionA: "1-C 2-A 3-B 4-D",
+    optionB: "1-B 2-D 3-C 4-A",
+    optionC: "1-C 2-B 3-D 4-A",
+    optionD: "1-A 2-B 3-D 4-C",
+    correctOption: "d"
+  },
+  {
+    id: 16,
+    question: "Which type of marble is most commonly used for countertops?",
+    optionA: "Slate",
+    optionB: "Red Sandstone",
+    optionC: "Limestone",
+    optionD: "Granite Marble",
+    correctOption: "d"
+  },
+  {
+    id: 17,
+    question: "S1: Western Ghats is a serial Natural World Heritage Site spread across multiple states.\n S2: Western Ghats includes protected areas in Maharashtra, Karnataka, Kerala and Tamil Nadu.",
+    optionA: "Both Correct",
+    optionB: "Both Incorrect",
+    optionC: "Only S1 Correct",
+    optionD: "Only S2 Correct",
+    correctOption: "a"
+  },
+  {
+    id: 18,
+    question: "The Dravidian style is characterized by a pyramidal tower called:",
+    optionA: "Shikhara",
+    optionB: "Vimana",
+    optionC: "Rekha",
+    optionD: "Latina",
+    correctOption: "b"
+  },
+  {
+    id: 19,
+    question: "Identify the Correct  Architectural Terms used",
+    image: "https://drive.google.com/thumbnail?id=1GvbmQtyHH9CjXzIgPVDauiqF-_2bxioa&sz=w1000",
+    optionA: "Surround",
+    optionB: "Fan Light",
+    optionC: "Brace",
+    optionD: "Patio",
+    correctOption: "d"
+  },
+  {
+    id: 20,
+    question: "Romi Khosla is particularly known for designing:",
+    optionA: "Shopping malls",
+    optionB: "Educational and institutional buildings",
+    optionC: "High-rise luxury apartments",
+    optionD: "Industrial warehouses",
+    correctOption: "b"
+  },
+  {
+    id: 21,
+    question: "Series of steps between floors is:",
+    optionA: "Staircase",
+    optionB: "Facade",
+    optionC: "Dome",
+    optionD: "Foundation",
+    correctOption: "a"
+  },
+  {
+    id: 22,
+    question: "Which of the following is a web-safe color?",
+    optionA: "#FFCC00",
+    optionB: "#FF5733",
+    optionC: "#1A2B3C",
+    optionD: "#GHIJKL",
+    correctOption: "a"
+  },
+  {
+    id: 23,
+    question: "find front view of figure",
+    image: "https://drive.google.com/thumbnail?id=1PmxSFFgJ2CVOKdz9skxomC0ak7zbe3Qo&sz=w1000",
+    optionA: "a",
+    optionB: "b",
+    optionC: "d",
+    optionD: "c",
+    correctOption: "d"
+  },
+  {
+    id: 24,
+    question: "Which roofing material is made from fired clay and is one of the oldest traditional roofing materials in India?",
+    optionA: "Asbestos sheet",
+    optionB: "Mangalore tiles",
+    optionC: "GI sheet",
+    optionD: "Polycarbonate sheet",
+    correctOption: "b"
+  },
+  {
+    id: 25,
+    question: "Statement 1: A library is a building housing a collection of books and resources.\nStatement 2: A museum is an institution that preserves and exhibits artifacts and art.",
+    optionA: "Statement 1 is True, Statement 2 is False",
+    optionB: "Statement 1 is False, Statement 2 is True",
+    optionC: "Both Statement 1 and Statement 2 is False",
+    optionD: "Both Statement 1 and Statement 2 are True.",
+    correctOption: "d"
+  },
+  {
+    id: 26,
+    question: "S1: Emulsion paints are water-based and easy to apply on interior walls. S2: Emulsion paints have strong odor and require long drying time.",
+    optionA: "Both true",
+    optionB: "Both false",
+    optionC: "S1 true, S2 false",
+    optionD: "S1 false, S2 true",
+    correctOption: "c"
+  },
+  {
+    id: 27,
+    question: "What is the hexadecimal code for pure white in web design?",
+    optionA: "#000000",
+    optionB: "#FFFFFF",
+    optionC: "#FFFF00",
+    optionD: "#CCCCCC",
+    correctOption: "b"
+  },
+  {
+    id: 28,
+    question: "Which of the Following Architect Design the Given Building",
+    image: "https://drive.google.com/thumbnail?id=1T9Vlx2B6Xucf5ADjJTzXUThduNeeKHuq&sz=w1000",
+    optionA: "A",
+    optionB: "C",
+    optionC: "B",
+    optionD: "D",
+    correctOption: "d"
+  },
+  {
+    id: 29,
+    question: "Which of the Following Architect Design the Given Building",
+    image: "https://drive.google.com/thumbnail?id=1XlCo0bd9Tfs8e2W3k80_hIu8Q9Bk56Ri&sz=w1000",
+    optionA: "B V Doshi",
+    optionB: "Charles Correa",
+    optionC: "Louis Kahn",
+    optionD: "Kuldip Singh",
+    correctOption: "d"
+  },
+  {
+    id: 30,
+    type: 'match-pair',
+    question: "Match the Pair",
+    columnAItems: [
+      "1. Non-Load Bearing Wall",
+      "2. Ashlar Masonry",
+      "3. Strip Foundation",
+      "4. Load-Bearing Wall"
+],
+    columnBItems: [
+      "Precisely cut stones with uniform joints.",
+      "Acts as a partition but does not support loads.",
+      "Supports structural loads from above.",
+      "Continuous footing under walls."
+],
+    optionA: "1-D 2-A 3-C 4-B",
+    optionB: "1-B 2-D 3-C 4-A",
+    optionC: "1-C 2-D 3-B 4-A",
+    optionD: "1-B 2-A 3-D 4-C",
+    correctOption: "d"
+  },
+  {
+    id: 31,
+    question: "S1: Frank Gehry's buildings feature sculptural titanium-clad deconstructed forms that challenge conventional geometry. S2: His design process begins with rigid structural calculations, never with expressive sketches or gestural drawings.",
+    optionA: "Both true",
+    optionB: "Both false",
+    optionC: "S1 true, S2 false",
+    optionD: "S1 false, S2 true",
+    correctOption: "c"
+  },
+  {
+    id: 32,
+    question: "A 'transfer beam' in a high-rise building is used to:",
+    optionA: "Connect the building to adjacent structures",
+    optionB: "Redirect loads from discontinued columns to other structural members",
+    optionC: "Resist seismic forces at the base",
+    optionD: "Support mechanical plant rooms",
+    correctOption: "b"
+  },
+  {
+    id: 33,
+    question: "The Kandariya Mahadeva Temple at Khajuraho belongs to which regional sub-style of Nagara?",
+    optionA: "Odisha style",
+    optionB: "Solanki style",
+    optionC: "Chandela style",
+    optionD: "Pratihara style",
+    correctOption: "c"
+  },
+  {
+    id: 34,
+    question: "INDENTIFY THE FAMOUS CHURCH",
+    image: "https://drive.google.com/thumbnail?id=1RyJ6WRtoMExhUS5ty2Mt_sTtNrmFUa9v&sz=w1000",
+    optionA: "Pauline Chapel",
+    optionB: "Sistine Chapel",
+    optionC: "Nicholas V Chapel",
+    optionD: "Redemptoris Mater Chapel",
+    correctOption: "b"
+  },
+  {
+    id: 35,
+    type: 'match-pair',
+    question: "Match the Pair",
+    columnAItems: [
+      "1. Sydney Opera House",
+      "2. Pompidou Center, Paris",
+      "3. Guggenheim Museum Bilbao",
+      "4. Beijing National Stadium (Bird's Nest)"
+],
+    columnBItems: [
+      "High-Tech cultural center, 1977, Piano & Rogers",
+      "Parametric/Olympic stadium, 2008, Herzog & de Meuron + Ai Weiwei",
+      "Deconstructivist icon, 1997, Frank Gehry",
+      "Expressionist landmark, 1973, Jørn Utzon"
+],
+    optionA: "1-B 2-A 3-C 4-D",
+    optionB: "1-C 2-D 3-B 4-A",
+    optionC: "1-B 2-A 3-D 4-C",
+    optionD: "1-D 2-A 3-C 4-B",
+    correctOption: "d"
+  },
+  {
+    id: 36,
+    type: 'match-pair',
+    question: "Match the Pair",
+    columnAItems: [
+      "1. Zinc",
+      "2. Asphalt",
+      "3. Reinforced Concrete",
+      "4. Polycarbonate"
+],
+    columnBItems: [
+      "Corrosion-resistant metal used in roofing and cladding.",
+      "Transparent thermoplastic used for skylights and lightweight roofing.",
+      "Bituminous material used for waterproofing and road surfaces.",
+      "Concrete strengthened with steel bars to resist tension and compression."
+],
+    optionA: "1-B 2-A 3-C 4-D",
+    optionB: "1-D 2-A 3-C 4-B",
+    optionC: "1-A 2-B 3-D 4-C",
+    optionD: "1-A 2-C 3-D 4-B",
+    correctOption: "d"
+  },
+  {
+    id: 37,
+    question: "INDENTIFY THE FAMOUS TEMPLE",
+    image: "https://drive.google.com/thumbnail?id=1gMpPByjn-xEBJLiuLoXIUHSr3EuiT5av&sz=w1000",
+    optionA: "Dilwara Temples",
+    optionB: "Palitana Temples",
+    optionC: "Ranakpur Jain Temple",
+    optionD: "Gomateshwara Temple",
+    correctOption: "c"
+  },
+  {
+    id: 38,
+    question: "1. Granite is an example of which type of stone?",
+    optionA: "Sedimentary Rock",
+    optionB: "Metamorphic Rock",
+    optionC: "Artificial Stone",
+    optionD: "Igneous Rock",
+    correctOption: "d"
+  },
+  {
+    id: 39,
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1oeGlvhrIjyBVQXSa6sHSR_z_cOtBN_WH&sz=w1000",
+    optionA: "c",
+    optionB: "d",
+    optionC: "b",
+    optionD: "a",
+    correctOption: "d"
+  },
+  {
+    id: 40,
+    question: "Which of the Following Architect Design the Given Building",
+    image: "https://drive.google.com/thumbnail?id=1-2axv4_FctoW4uD96_oAnpgEwd3AQlJX&sz=w1000",
+    optionA: "A",
+    optionB: "C",
+    optionC: "B",
+    optionD: "D",
+    correctOption: "d"
+  },
+  {
+    id: 41,
+    type: 'match-pair',
+    question: "Match the Pair",
+    columnAItems: [
+      "1. Pench National Park",
+      "2. Ranthambore National Park",
+      "3. Bandhavgarh National Park",
+      "4. Bandipur National Park"
+],
+    columnBItems: [
+      "Rajasthan",
+      "Madhya Pradesh",
+      "Madhya Pradesh",
+      "Karnataka"
+],
+    optionA: "1-A 2-D 3-C 4-B",
+    optionB: "1-A 2-C 3-D 4-B",
+    optionC: "1-C 2-D 3-B 4-A",
+    optionD: "1-C 2-A 3-B 4-D",
+    correctOption: "d"
+  },
+  {
+    id: 42,
+    question: "Romanesque architecture is most distinctly identified by:",
+    optionA: "Pointed arches and ribbed vaults",
+    optionB: "Rounded arches and massive stone walls",
+    optionC: "Flying buttresses and large windows",
+    optionD: "Geodesic dome structures",
+    correctOption: "b"
+  },
+  {
+    id: 43,
+    question: "find top view of figure",
+    image: "https://drive.google.com/thumbnail?id=1PB7sNTYhfZeDU2Z0hsAJQxsx3VgLkg5D&sz=w1000",
+    optionA: "b",
+    optionB: "a",
+    optionC: "d",
+    optionD: "c",
+    correctOption: "d"
+  },
+  {
+    id: 44,
+    question: "GBCI stands for?",
+    optionA: "Green Building Certification Institute",
+    optionB: "Green Building Code of India",
+    optionC: "Government Building Control India",
+    optionD: "Green Building Certification Institute",
+    correctOption: "d"
+  },
+  {
+    id: 45,
+    question: "Vishu, Onam is Celebrated in Which of the Following State ?",
+    optionA: "Bihar",
+    optionB: "Odisha",
+    optionC: "Mizorm",
+    optionD: "Kerala",
+    correctOption: "d"
+  },
+  {
+    id: 46,
+    question: "Which term describes architecture that is designed using local materials, climate knowledge, and regional building traditions without formal architectural training?",
+    optionA: "Postmodern architecture",
+    optionB: "Vernacular architecture",
+    optionC: "Brutalist architecture",
+    optionD: "Parametric architecture",
+    correctOption: "b"
+  },
+  {
+    id: 47,
+    question: "Read the Instruction",
+    image: "https://drive.google.com/thumbnail?id=1xKEFWNRIALStAxf2nhlN8cHkyy35O-Qa&sz=w1000",
+    optionA: "b",
+    optionB: "d",
+    optionC: "c",
+    optionD: "a",
+    correctOption: "d"
+  },
+  {
+    id: 48,
+    question: "What is \"context\" in architectural design?",
+    optionA: "The surrounding environment and conditions of a site",
+    optionB: "The budget of the project",
+    optionC: "The construction timeline",
+    optionD: "The interior furniture",
+    correctOption: "a"
+  },
+  {
+    id: 49,
+    type: 'match-pair',
+    question: "Match the Pair",
+    columnAItems: [
+      "1. Amer Fort",
+      "2. Chittorgarh Fort",
+      "3. Dhamek Stupa",
+      "4. Bada/Chhota Imambara"
+],
+    columnBItems: [
+      "Lucknow",
+      "Chittor",
+      "Jaipur",
+      "Sarnath"
+],
+    optionA: "1-C 2-D 3-B 4-A",
+    optionB: "1-B 2-A 3-C 4-D",
+    optionC: "1-B 2-D 3-A 4-C",
+    optionD: "1-C 2-B 3-D 4-A",
+    correctOption: "d"
+  },
+  {
+    id: 50,
+    question: "Read the instruction coding",
+    image: "https://drive.google.com/thumbnail?id=1j5Z8Y4-EcRuv3sm3wK_Q3uzcmZM-uyK0&sz=w1000",
+    optionA: "d",
+    optionB: "a",
+    optionC: "b",
+    optionD: "c",
+    correctOption: "d"
+  },
+    
+];
 
 
 
