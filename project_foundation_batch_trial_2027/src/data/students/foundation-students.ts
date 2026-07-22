@@ -8,7 +8,7 @@ import { UserAccount } from '../../types';
 export const foundationStudents: UserAccount[] = [
   // PASTE YOUR STUDENTS HERE
   // Example format:
-  { email: 'student1@gmail.com', password: 'pass123', role: 'student', approved: true, courses: ['foundation'] },
+  { email: 'student1@gmail.com', password: 'pass123', role: 'student', approved: true, courses: ['foundation','nata_2026'] },
   
 ];
 
